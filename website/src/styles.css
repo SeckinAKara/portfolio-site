@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --axo-blue: rgb(146, 179, 230);
+    --axo-light: rgb(226, 210, 176);
+    --axo-dark: rgb(121, 104, 74);
+    --axo-pink: rgb(231, 171, 197);
+    --axo-eye: rgb(81, 253, 255);
+}

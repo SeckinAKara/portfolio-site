@@ -1,0 +1,8 @@
+<div>
+    <p 
+        *ngFor="let line of poem.lines"
+        [ngStyle]="{'text-align': line.align}";
+    >
+        {{ line }}
+    </p>
+</div>

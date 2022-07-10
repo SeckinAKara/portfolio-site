@@ -1,0 +1,23 @@
+// IPA Guide:
+// a -> cat = kat
+// i -> bit = bit
+// e -> bed = bed
+// V -> but = bVt
+// o -> bot = bot
+// A -> cake = kAk
+// E -> beak = bEk
+// I -> bike = bIk
+// O -> boat = bOt
+// U -> boot = bUt
+// u -> book = buk
+// aw -> doubt = dawt
+// oy -> boy = boy
+// . -> about = .bawt
+// N -> sing = siN
+// T -> think = TiNk
+// D -> the = D.
+// S -> shut = SVt
+// C -> cheat = CEt
+// R -> bird = bRd
+// Z -> azure = aZR
+// j -> jump = jVmp

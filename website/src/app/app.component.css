@@ -1,0 +1,32 @@
+div {
+    color: white;
+    background-color: var(--axo-blue);
+}
+
+
+nav {
+    background-color: var(--axo-blue);
+    color: white;
+    font-size: 16;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+  color: var(--axo-light);
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+} 
