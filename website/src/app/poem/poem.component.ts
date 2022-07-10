@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { Full_Poem } from 'src/main';
+import { FileGrabberService } from '../file-grabber.service';
+import { Full_Poem } from './poem_classes';
 
 @Component({
   selector: 'poem',
@@ -10,15 +11,24 @@ import { Full_Poem } from 'src/main';
 export class PoemComponent implements OnInit {
 
   poem: Full_Poem;
+  poem_title: string;
 
-  constructor(full_poem: Full_Poem, private route: ActivatedRoute) {
-      this.poem = full_poem;
+  constructor(private route: ActivatedRoute, private http: FileGrabberService) {
+    this.poem_title = '';
+    this.poem = new Full_Poem('', []);
    }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.poem = params['name'];
+      this.poem_title = params['name'];
     });
+    if (this.poem_title !== undefined) {
+      this.poem = await this.http.getPoem(this.poem_title);
+    }
   }
 
+  async updatePoem(poem_title: string) {
+    this.poem_title = poem_title;
+    this.poem = await this.http.getPoem(this.poem_title);
+  }
 }

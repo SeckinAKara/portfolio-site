@@ -1,4 +1,4 @@
-import { Pronunciation, Word } from "src/main";
+import { Pronunciation, Word } from "./poem_classes";
 
 
 let the = new Word('the', new Pronunciation(['D.']));
@@ -10,7 +10,7 @@ let so = new Word('so', new Pronunciation(['sO']));
 let i = new Word('i', new Pronunciation(['I']));
 let i_m = new Word("i'm", new Pronunciation(['Im']));
 
-export var common_words = {
+export const common_words = {
     'the': the,
     'but': but,
     'yet': yet,

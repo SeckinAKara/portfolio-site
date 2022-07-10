@@ -6,3 +6,33 @@
     --axo-pink: rgb(231, 171, 197);
     --axo-eye: rgb(81, 253, 255);
 }
+
+body {
+    background-color: var(--axo-blue);
+    color: white;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    font-size: 16;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* visited link */
+a:visited {
+    color: var(--axo-light);
+    font-size: 16;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* mouse over link */
+a:hover {
+    color: white;
+    font-size: 16;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* selected link */
+a:active {
+    color: white;
+    font-size: 16;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} 
