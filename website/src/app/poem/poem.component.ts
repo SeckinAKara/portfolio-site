@@ -1,5 +1,4 @@
-import { Component, Injectable, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { FileGrabberService } from '../file-grabber.service';
 import { Full_Poem } from './poem_classes';
 
@@ -8,27 +7,31 @@ import { Full_Poem } from './poem_classes';
   templateUrl: './poem.component.html',
   styleUrls: ['./poem.component.css']
 })
-export class PoemComponent implements OnInit {
+export class PoemComponent implements OnInit, OnChanges {
 
-  poem: Full_Poem;
-  poem_title: string;
+  @Input() poem_title: string = '';
+  poem: Full_Poem = new Full_Poem('', []);
 
-  constructor(private route: ActivatedRoute, private http: FileGrabberService) {
-    this.poem_title = '';
-    this.poem = new Full_Poem('', []);
-   }
+  constructor(private http: FileGrabberService) {   }
 
-  async ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.poem_title = params['name'];
-    });
-    if (this.poem_title !== undefined) {
-      this.poem = await this.http.getPoem(this.poem_title);
+  ngOnInit() {
+    if (this.poem_title == undefined) {
+      this.poem = new Full_Poem('', []);
+    } else {
+      this.getPoem();
     }
   }
 
-  async updatePoem(poem_title: string) {
-    this.poem_title = poem_title;
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(changes);
+    if (this.poem_title == undefined) {
+      this.poem = new Full_Poem('', []);
+    } else {
+      this.getPoem();
+    }
+  }
+
+  async getPoem() {
     this.poem = await this.http.getPoem(this.poem_title);
   }
 }

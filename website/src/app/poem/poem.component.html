@@ -1,13 +1,3 @@
-<div>
-    <ul>
-        <li (click)="updatePoem('parents_house_mine')">my parents' house was once also mine</li> 
-    </ul>
-    <br>
-    <p 
-        *ngFor="let line of poem.lines"
-        [ngStyle]="{'text-align': line.align}">
-        <span *ngFor="let word of line.words">
-            {{ word.left_separator }}{{ word.spelling }}{{ word.right_separator }}
-        </span>
-    </p>
-</div>
+<p *ngFor="let line of poem.lines" [ngStyle]="{'text-align': line.align}">
+    <span *ngFor="let word of line.words">{{ word.left_separator }}{{ word.spelling }}{{ word.right_separator }}</span>
+</p>

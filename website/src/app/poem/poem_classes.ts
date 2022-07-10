@@ -34,7 +34,7 @@ export class Pronunciation {
   english: boolean;
   stressed_syllables: number[];
 
-  constructor(ipa: string[], stressed_syllables: number[] = [], spelled: string[] = [], english: boolean = true) {
+  constructor(ipa: string[], stressed_syllables: number[] = [0], spelled: string[] = [], english: boolean = true) {
       this.ipa = ipa;
       this.stressed_syllables = stressed_syllables;
       this.spelled = spelled;
@@ -52,8 +52,8 @@ export class Word {
   right_separator: string;
 
   constructor(
-              spelling: string, pronunciation: Pronunciation, primary_meaning: string = '', other_meanings: string[] = [], 
-              language: Language = Language.ENGLISH, left_separator: string = "", right_separator: string = " "
+              spelling: string, pronunciation: Pronunciation, left_separator: string = "", right_separator: string = " ", 
+              primary_meaning: string = '', other_meanings: string[] = [], language: Language = Language.ENGLISH
       ) {
       this.spelling = spelling;
       this.pronunciation = pronunciation;

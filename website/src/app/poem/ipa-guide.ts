@@ -10,6 +10,8 @@
 // O -> boat = bOt
 // U -> boot = bUt
 // u -> book = buk
+// y -> yes = yes
+// w -> wait = wAt
 // aw -> doubt = dawt
 // oy -> boy = boy
 // . -> about = .bawt
@@ -18,6 +20,11 @@
 // D -> the = D.
 // S -> shut = SVt
 // C -> cheat = CEt
+// aR -> cart = kaRt
+// ER -> hear = hER
+// OR -> snore = snOR
+// UR -> pure = pyUR
 // R -> bird = bRd
 // Z -> azure = aZR
 // j -> jump = jVmp
+// - -> uh-oh = V-O

@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PoemComponent } from './poem/poem.component';
+import { PoemListComponent } from './poem-list/poem-list.component';
 
 const routes: Routes = [
-  {path: 'poems', component: PoemComponent},
-  {path: 'poems/:name', component: PoemComponent}
+  {
+    path: 'poems/', 
+    component: PoemListComponent
+  },
+  {
+    path: 'poems/:title', 
+    component: PoemListComponent
+  },
+  {
+    path: 'poems', 
+    redirectTo: 'poems/'
+  }
 ];
 
 @NgModule({

@@ -36,3 +36,5 @@ a:active {
     font-size: 16;
     font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 } 
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
