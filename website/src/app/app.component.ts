@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 export class AppComponent {
   title = 'website';
   
-  poem_title: string = '';
+  poem_title: string = 'index';
   
   constructor(public router: AppRoutingModule) { }
 }

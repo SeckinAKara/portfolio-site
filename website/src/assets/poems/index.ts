@@ -7,3 +7,5 @@ export const all_poems:poem_map  = {
     'parents_house_mine': parents_house_mine,
     'pupas': pupas
 }
+
+export const poem = new Full_Poem('', []);

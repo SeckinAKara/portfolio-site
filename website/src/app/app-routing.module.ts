@@ -4,16 +4,16 @@ import { PoemListComponent } from './poem-list/poem-list.component';
 
 const routes: Routes = [
   {
-    path: 'poems/', 
-    component: PoemListComponent
-  },
-  {
     path: 'poems/:title', 
     component: PoemListComponent
   },
   {
-    path: 'poems', 
-    redirectTo: 'poems/'
+    path: 'poems*', 
+    redirectTo: 'poems/index'
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];
 

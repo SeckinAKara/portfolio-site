@@ -7,28 +7,16 @@ import { Full_Poem } from './poem_classes';
   templateUrl: './poem.component.html',
   styleUrls: ['./poem.component.css']
 })
-export class PoemComponent implements OnInit, OnChanges {
+export class PoemComponent implements OnChanges {
 
-  @Input() poem_title: string = '';
+  @Input() poem_title: string = 'index';
   poem: Full_Poem = new Full_Poem('', []);
 
   constructor(private http: FileGrabberService) {   }
 
-  ngOnInit() {
-    if (this.poem_title == undefined) {
-      this.poem = new Full_Poem('', []);
-    } else {
-      this.getPoem();
-    }
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
-    if (this.poem_title == undefined) {
-      this.poem = new Full_Poem('', []);
-    } else {
-      this.getPoem();
-    }
+  ngOnChanges() {
+    console.log(this.poem_title);
+    this.getPoem();
   }
 
   async getPoem() {
