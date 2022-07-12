@@ -1,0 +1,15 @@
+p {
+    width: fit-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    display: inline-block;
+    top: 100%;
+
+}

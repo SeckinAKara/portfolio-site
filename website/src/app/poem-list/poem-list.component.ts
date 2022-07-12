@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Full_Poem } from '../poem/poem_classes';
+import { Full_Poem, Word } from '../poem/poem_classes';
 
 @Component({
   selector: 'poem-list',

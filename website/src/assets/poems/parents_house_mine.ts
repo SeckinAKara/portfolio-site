@@ -14,9 +14,9 @@ let unfolds = new Word('unfolds', new Pronunciation(['Vn', 'fOldz'], [1]), '', '
 let wrong = new Word('wrong', new Pronunciation(['roN']), '', '');
 let dance = new Word('dance', new Pronunciation(['dans']), '', '');
 
-let line1 = new Line([common_words.the, night, sky, unfolds], Line_Alignment.LEFT);
-let line2 = new Line([common_words.but, common_words["i'm"], wrong], Line_Alignment.LEFT);
-let line3 = new Line([common_words.yet, common_words.it, common_words.still, unfolds], Line_Alignment.LEFT);
-let line4 = new Line([common_words.so, common_words.i, dance], Line_Alignment.LEFT);
+let line1 = new Line(1, [common_words.the, night, sky, unfolds], Line_Alignment.LEFT);
+let line2 = new Line(2, [common_words.but, common_words["i'm"], wrong], Line_Alignment.LEFT);
+let line3 = new Line(3, [common_words.yet, common_words.it, common_words.still, unfolds], Line_Alignment.LEFT);
+let line4 = new Line(4, [common_words.so, common_words.i, dance], Line_Alignment.LEFT);
 
 export const parents_house_mine = new Full_Poem("my parents' house was once also mine", [line1, line2, line3, line4], "May 2019");

@@ -51,5 +51,3 @@ import 'zone.js';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
-import 'node_modules/fs*'
-import 'node_modules/path*'

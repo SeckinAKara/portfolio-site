@@ -1,2 +1,12 @@
-<p>Poem Title: {{ poem.title }}</p>
-<p>Creation Time: {{ poem.creation_time }}</p>
+<div>
+    <p>Poem Title: {{ poem.title }}</p>
+    <p>Creation Time: {{ poem.creation_time }}</p>
+    <span>
+        Pronunciation Key
+        <br>
+        <span *ngFor="let line of pronunciation_key">
+            {{ line }}
+            <br>
+        </span>
+    </span>
+</div>

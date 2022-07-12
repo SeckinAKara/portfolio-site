@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Full_Poem, PoemMap } from './poem/poem_classes';
+import { Full_Poem, PoemMap, poem_map } from './poem/poem_classes';
+import { all_poems } from '../assets/poems/index';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +10,12 @@ export class FileGrabberService {
 
   constructor(private http: HttpClient) { }
   
-  async getAllPoems():Promise<poem_map> {
-    const all_poems:PoemMap = (await import('../assets/poems/index.js')).index;
-    return all_poems;
-  }
-
-  async getPoem(poem_title: string):Promise<Full_Poem> {
+  getPoem(poem_title: string):Full_Poem {
     if ((poem_title === undefined) || (poem_title == '') || (poem_title == 'index')) {
       return new Full_Poem('', []);
     } else {
-      return (await this.getAllPoems())[poem_title];
+      let poem:Full_Poem = all_poems.poem_map[poem_title];
+      return poem;
     }
   }
 
