@@ -1,11 +1,24 @@
-import { Full_Poem, poem_map } from '../../app/poem/poem_classes';
-import { poem as parents_house_mine} from './parents_house_mine';
-import { poem as pupas} from './pupas';
+import { PoemMap, Full_Poem, poem_map } from "src/app/poem/poem_classes";
 
-export const all_poems:poem_map  = {
-    '': new Full_Poem('', []),
-    'parents_house_mine': parents_house_mine,
-    'pupas': pupas
-}
+var new_index = new PoemMap();
+var poem_index:poem_map = new_index.poem_map
 
-export const poem = new Full_Poem('', []);
+var scandir = require('../lib/scandir').create();
+scandir.on('file', function(file, stats) {
+	poem_index[stats.] = file;
+});
+
+scandir.on('error', function(err){
+	console.error(err);
+});
+
+scandir.on('end', function(){
+	console.log('Done');
+});
+scandir.scan({
+	dir: '.',
+	recursive: true,
+	filter: /.*\.ts/
+});
+
+return new_index;

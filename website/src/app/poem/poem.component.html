@@ -1,3 +1,4 @@
-<p *ngFor="let line of poem.lines" [ngStyle]="{'text-align': line.align}">
-    <span *ngFor="let word of line.words">{{ word.left_separator }}{{ word.spelling }}{{ word.right_separator }}</span>
+<p *ngFor="let line of poem.lines" [ngStyle]="{'text-align': line.align}" style="cursor:default">
+    <span *ngFor="let word of line.words">
+        {{ word.left_separator }}{{ word.spelling }}{{ word.right_separator }}</span>
 </p>

@@ -42,18 +42,26 @@ export class Pronunciation {
   }
 }
 
+
+export type punctuation_map = {
+  [key: string]: number[]
+}
+
 export class Word {
   spelling: string;
   pronunciation: Pronunciation;
+  left_separator: string;
+  right_separator: string;
   primary_meaning: string;
   other_meanings: string[];
   language: Language;
-  left_separator: string;
-  right_separator: string;
+  punctuation: punctuation_map;
+  capitalization: number[];
 
   constructor(
               spelling: string, pronunciation: Pronunciation, left_separator: string = "", right_separator: string = " ", 
-              primary_meaning: string = '', other_meanings: string[] = [], language: Language = Language.ENGLISH
+              primary_meaning: string = '', other_meanings: string[] = [], language: Language = Language.ENGLISH,
+              punctuation:punctuation_map = {}, capitalization:number[] = []
       ) {
       this.spelling = spelling;
       this.pronunciation = pronunciation;
@@ -62,6 +70,44 @@ export class Word {
       this.language = language;
       this.left_separator = left_separator;
       this.right_separator = right_separator;
+      this.punctuation = punctuation;
+      this.capitalization = capitalization;
+  }
+
+  public rightSeparator(char: string): Word {
+      let return_word = this.copyWord();
+      return_word.right_separator = char;
+      return return_word;
+  }
+  public leftSeparator(char: string): Word {
+      let return_word = this.copyWord();
+      return_word.left_separator = char;
+      return return_word;
+  }
+  public capitalize(indices: number[]): Word {
+    let return_word = this.copyWord();
+    indices.forEach(i => {
+      return_word.spelling = 
+                              return_word.spelling.substring(0, i)
+                            + return_word.spelling.substring(i, i+1).toUpperCase()
+                            + return_word.spelling.substring(i+1)
+    });
+    return return_word;
+  }
+
+  public copyWord(): Word {
+    let newWord = new Word(
+      this.spelling,
+      this.pronunciation,
+      this.left_separator,
+      this.right_separator,
+      this.primary_meaning,
+      this.other_meanings,
+      this.language,
+      this.punctuation,
+      this.capitalization
+      );
+    return newWord;
   }
 }
 
@@ -78,11 +124,23 @@ export class Line {
 export class Full_Poem {
   title: string;
   lines: Line[];
+  creation_time: string;
 
-  constructor(title: string, lines: Line[]) {
+  constructor(title: string, lines: Line[], creation_time = "N/A") {
     this.title = title;
     this.lines = lines;
+    this.creation_time = creation_time;
   }
+}
+
+export type poem_map {
+  [key: String]: Full_Poem[];
+}
+
+export class PoemMap {
+  poem_map:poem_map = {"index": new Full_Poem("index", [new Line([new Word('', new Pronunciation(['']))], Line_Alignment.LEFT)])};
+
+  constructor() { }
 }
 
 export class Relationship {
@@ -95,8 +153,4 @@ export class Relationship {
       this.strong = strong;
       this.type = type;
   }
-}
-
-export type poem_map = {
-    [key: string]: Full_Poem
 }

@@ -32,7 +32,22 @@ let we_ll = new Word("we'll", new Pronunciation(['wEl']));
 let we = new Word("we", new Pronunciation(['wE']));
 let never = new Word("never", new Pronunciation(['ne', 'vR'], [0]));
 let die = new Word("die", new Pronunciation(['dI']));
-
+let when = new Word("when", new Pronunciation(['wen']));
+let everything = new Word("everything", new Pronunciation(['ev', 'rE', 'TiN'], [0]));
+let that = new Word("that", new Pronunciation(["Dat"]));
+let is = new Word("is", new Pronunciation(["iz"]));
+let even = new Word("even", new Pronunciation(["E", 'v.n'], [0]));
+let _as = new Word("as", new Pronunciation(["az"]));
+let go = new Word("go", new Pronunciation(["gO"]));
+let by = new Word("by", new Pronunciation(["bI"]));
+let good = new Word("good", new Pronunciation(["gud"]));
+let less = new Word("less", new Pronunciation(["les"]));
+let more = new Word("more", new Pronunciation(["mOr"]));
+let than = new Word("than", new Pronunciation(["Dan"]));
+let to = new Word("to", new Pronunciation(["tU"]));
+let I = new Word("I", new Pronunciation(["I"]));
+let a = new Word("a", new Pronunciation(["."]));
+let from = new Word("from", new Pronunciation(["frVm"]));
 
 export const common_words = {
     'the': the,
@@ -65,5 +80,23 @@ export const common_words = {
     "we'll": we_ll,
     "we": we,
     "never": never,
-    "die": die
+    "die": die,
+    "when": when,
+    "everything": everything,
+    "that": that,
+    "is": is,
+    "even": even,
+    "as": _as,
+    "go": go,
+    "by": by,
+    "good": good,
+    "less": less,
+    "more": more,
+    "than": than,
+    "to": to,
+    "I": I,
+    "a": a,
+    "from": from
+
+
 }

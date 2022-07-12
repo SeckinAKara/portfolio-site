@@ -8,7 +8,15 @@ const routes: Routes = [
     component: PoemListComponent
   },
   {
-    path: 'poems*', 
+    path: 'poems/undefined', 
+    redirectTo: 'poems/index'
+  },
+  {
+    path: 'poems/', 
+    redirectTo: 'poems/index'
+  },
+  {
+    path: 'poems', 
     redirectTo: 'poems/index'
   },
   {

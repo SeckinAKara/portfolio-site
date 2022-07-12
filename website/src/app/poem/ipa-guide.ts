@@ -10,12 +10,14 @@
 // O -> boat = bOt
 // U -> boot = bUt
 // u -> book = buk
-// y -> yes = yes
+// y -> use = yUz
 // w -> wait = wAt
 // aw -> doubt = dawt
 // oy -> boy = boy
-// . -> about = .bawt
+// . -> about = .bawt (schwa)
 // N -> sing = siN
+// am -> cam
+// an -> can
 // T -> think = TiNk
 // D -> the = D.
 // S -> shut = SVt

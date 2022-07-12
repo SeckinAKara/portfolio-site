@@ -1,8 +1,12 @@
 <div>
-    <ul>
+    <ul style="cursor:pointer">
         <li routerLink="/poems/parents_house_mine" (click)="updatePoem('parents_house_mine')">my parents' house was once also mine</li>
         <li routerLink="/poems/pupas" (click)="updatePoem('pupas')">pupas</li>
+        <li routerLink="/poems/coming_out_depressive" (click)="updatePoem('coming_out_depressive')">coming out of a depressive episode</li>
     </ul>
     <br>
 </div>
-<poem [poem_title]="poem_title"></poem>
+<p style="display: flex; width:100%">
+    <poem [poem_title]="poem_title" style="width: 80%">
+    <poem-info [poem_title]="poem_title" style="width: 20%"></poem-info></poem>
+</p>

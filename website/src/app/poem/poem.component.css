@@ -1,9 +1,38 @@
 p {
     margin-left: 20%;
+    padding-left: 2%;
+    padding-right: 2%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16pt;
+    border-left: solid black 1pt;
+    border-right: solid black 1pt;
 }
 
 li {
     font-size: 14
+}
+
+/* Tooltip text */
+.tooltiptext {
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+
+    /* Position the tooltip text - see examples below! */
+    position: relative;
+    top: -5px;
+    left: 101%;
+    z-index: 1;
+
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    opacity: 1;
 }
