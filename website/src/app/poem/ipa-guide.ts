@@ -7,11 +7,11 @@ export const pronunciation_key:string[] = [
 "A -> cake = kAk ~~~~~ S -> shut = SVt",
 "E -> beak = bEk ~~~~~ C -> cheat = CEt",
 "I -> bike = bIk ~~~~~ aR -> cart = kaRt",
-"O -> boat = bOt ~~~~~ ER -> hear = hER",
-"U -> boot = bUt ~~~~~ OR -> snore = snOR",
-"u -> book = buk ~~~~~ UR -> pure = pyUR",
-"y -> use = yUz ~~~~~~ R -> bird = bRd",
-"aw -> doubt = dawt ~~ Z -> azure = aZR",   
+"O -> boat = bOt ~~~~~ AR -> care = kAR",
+"U -> boot = bUt ~~~~~ ER -> hear = hER",
+"u -> book = buk ~~~~~ OR -> snore = snOR",
+"y -> use = yUz ~~~~~~ .R -> bird = b.Rd",
+"aw -> doubt = dawt ~~ Z -> azure = aZ.R",   
 "oy -> boy = boy ~~~~~ j -> jump = jVmp",
 "- -> uh-oh = V-O ~~~~ . -> about = .bawt"
 ];

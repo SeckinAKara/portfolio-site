@@ -10,7 +10,7 @@ import { Pronunciation, Word } from '../poem/poem_classes';
 export class PoemWordTooltipComponent extends PoemComponent {
   
   @Input() override clicked: number = 0;
-  @Input() current_word: Word = new Word('', new Pronunciation([]));
+  @Input() current_word: Word = new Word('', ['']);
   output_text: string[] = [];
 
   override ngOnInit() {}

@@ -58,15 +58,15 @@ export class Word {
   punctuation: punctuation_map;
   capitalization: number[];
 
-  full_spelling: string;
+  full_spelling: string = '';
 
   constructor(
-              spelling: string, pronunciation: Pronunciation, left_separator: string = "", right_separator: string = " ", 
+              spelling: string, pronunciation: string[], stressed_syllables: number[] = [0], left_separator: string = "", right_separator: string = " ", 
               primary_meaning: string = '', other_meanings: string[] = [], language: Language = Language.ENGLISH,
               punctuation:punctuation_map = {}, capitalization:number[] = []
       ) {
       this.spelling = spelling;
-      this.pronunciation = pronunciation;
+      this.pronunciation = new Pronunciation(pronunciation, stressed_syllables);
       this.left_separator = left_separator;
       this.right_separator = right_separator;
       this.primary_meaning = primary_meaning;
@@ -74,15 +74,19 @@ export class Word {
       this.language = language;
       this.punctuation = punctuation;
       this.capitalization = capitalization;
+  }
 
-      this.full_spelling = this.spelling;
-      for (let i=0; i < this.capitalization.length; i++) {
-        this.full_spelling = this.full_spelling.substring(0, this.capitalization[i])
-                             + this.full_spelling.substring(this.capitalization[i], this.capitalization[i]+1).toUpperCase
-                             + this.full_spelling.substring(this.capitalization[i]+1);
-      }
 
-      this.full_spelling = this.left_separator + this.full_spelling + this.right_separator;
+  public fullSpelling(): string  {
+    let full_spelling = this.spelling;
+    for (let i=0; i < this.capitalization.length; i++) {
+        full_spelling = full_spelling.substring(0, this.capitalization[i])
+                             + full_spelling.substring(this.capitalization[i], this.capitalization[i]+1).toUpperCase()
+                             + full_spelling.substring(this.capitalization[i]+1);
+    }
+
+    full_spelling = this.left_separator + full_spelling + this.right_separator;
+    return full_spelling;
   }
 
   public rightSeparator(char: string): Word {
@@ -109,7 +113,8 @@ export class Word {
   public copyWord(): Word {
     let newWord = new Word(
       this.spelling,
-      this.pronunciation,
+      this.pronunciation.ipa,
+      this.pronunciation.stressed_syllables,
       this.left_separator,
       this.right_separator,
       this.primary_meaning,
@@ -128,7 +133,7 @@ export class Line {
   number_of_words: number[];
   align: Line_Alignment;
 
-  constructor(nth: number = 0, words: Word[], align: Line_Alignment){
+  constructor(nth: number = 0, words: Word[], align: Line_Alignment = Line_Alignment.LEFT){
     this.nth = nth;  
     this.words = words;
     this.number_of_words = Array(this.words.length).fill(0).map((x,i)=>i);
@@ -157,7 +162,7 @@ export type poem_map = {
 export class PoemMap {
   poem_map:poem_map;
 
-  constructor(poem_map:poem_map = {"index": new Full_Poem("index", [new Line(0, [new Word('', new Pronunciation(['']))], Line_Alignment.LEFT)])}) { 
+  constructor(poem_map:poem_map = {"index": new Full_Poem("index", [new Line(0, [new Word('', [''])], Line_Alignment.LEFT)])}) { 
     this.poem_map = poem_map;
   }
 }

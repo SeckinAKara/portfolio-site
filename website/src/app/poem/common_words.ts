@@ -1,53 +1,65 @@
 import { Pronunciation, Word } from "./poem_classes";
 
 
-let the = new Word('the', new Pronunciation(['D.']));
-let but = new Word('but', new Pronunciation(['bVt']));
-let yet = new Word('yet', new Pronunciation(['yet']));
-let it = new Word('it', new Pronunciation(['it']));
-let still = new Word('still', new Pronunciation(['stil']));
-let so = new Word('so', new Pronunciation(['sO']));
-let i = new Word('i', new Pronunciation(['I']));
-let i_m = new Word("i'm", new Pronunciation(['Im']));
-let aren_t = new Word("aren't", new Pronunciation(['aRnt']));
-let _with = new Word("with", new Pronunciation(['wiT']));
-let and = new Word("and", new Pronunciation(['and']));
-let each = new Word("each", new Pronunciation(['EC']));
-let you = new Word("you", new Pronunciation(['yU']));
-let one = new Word("one", new Pronunciation(['wVn']));
-let you_ve = new Word("you've", new Pronunciation(['yUv']));
-let none = new Word("none", new Pronunciation(['nVn']));
-let all = new Word("all", new Pronunciation(['ol']));
-let see = new Word("see", new Pronunciation(['sE']));
-let _in = new Word("in", new Pronunciation(['in']));
-let your = new Word("your", new Pronunciation(['yR']));
-let you_ll = new Word("you'll", new Pronunciation(['yul']));
-let world = new Word("world", new Pronunciation(['wRld']));
-let just = new Word("just", new Pronunciation(['jVst']));
-let own = new Word("own", new Pronunciation(['On']));
-let we_re = new Word("we're", new Pronunciation(['wER']));
-let eyes = new Word("eyes", new Pronunciation(["Iz"]));
-let like = new Word("like", new Pronunciation(["lIk"]));
-let we_ll = new Word("we'll", new Pronunciation(['wEl']));
-let we = new Word("we", new Pronunciation(['wE']));
-let never = new Word("never", new Pronunciation(['ne', 'vR'], [0]));
-let die = new Word("die", new Pronunciation(['dI']));
-let when = new Word("when", new Pronunciation(['wen']));
-let everything = new Word("everything", new Pronunciation(['ev', 'rE', 'TiN'], [0]));
-let that = new Word("that", new Pronunciation(["Dat"]));
-let is = new Word("is", new Pronunciation(["iz"]));
-let even = new Word("even", new Pronunciation(["E", 'v.n'], [0]));
-let _as = new Word("as", new Pronunciation(["az"]));
-let go = new Word("go", new Pronunciation(["gO"]));
-let by = new Word("by", new Pronunciation(["bI"]));
-let good = new Word("good", new Pronunciation(["gud"]));
-let less = new Word("less", new Pronunciation(["les"]));
-let more = new Word("more", new Pronunciation(["mOr"]));
-let than = new Word("than", new Pronunciation(["Dan"]));
-let to = new Word("to", new Pronunciation(["tU"]));
-let I = new Word("I", new Pronunciation(["I"]));
-let a = new Word("a", new Pronunciation(["."]));
-let from = new Word("from", new Pronunciation(["frVm"]));
+let the = new Word('the', ['D.']);
+let but = new Word('but', ['bVt']);
+let yet = new Word('yet', ['yet']);
+let it = new Word('it', ['it']);
+let still = new Word('still', ['stil']);
+let so = new Word('so', ['sO']);
+let i = new Word('i', ['I']);
+let i_m = new Word("i'm", ['Im']);
+let aren_t = new Word("aren't", ['aRnt']);
+let _with = new Word("with", ['wiT']);
+let and = new Word("and", ['and']);
+let each = new Word("each", ['EC']);
+let you = new Word("you", ['yU']);
+let one = new Word("one", ['wVn']);
+let you_ve = new Word("you've", ['yUv']);
+let none = new Word("none", ['nVn']);
+let all = new Word("all", ['ol']);
+let see = new Word("see", ['sE']);
+let _in = new Word("in", ['in']);
+let your = new Word("your", ['yR']);
+let you_ll = new Word("you'll", ['yul']);
+let world = new Word("world", ['wRld']);
+let just = new Word("just", ['jVst']);
+let own = new Word("own", ['On']);
+let we_re = new Word("we're", ['wER']);
+let eyes = new Word("eyes", ["Iz"]);
+let like = new Word("like", ["lIk"]);
+let we_ll = new Word("we'll", ['wEl']);
+let we = new Word("we", ['wE']);
+let never = new Word("never", ['ne', 'vR'], [0]);
+let die = new Word("die", ['dI']);
+let when = new Word("when", ['wen']);
+let everything = new Word("everything", ['ev', 'rE', 'TiN'], [0]);
+let that = new Word("that", ["Dat"]);
+let is = new Word("is", ["iz"]);
+let even = new Word("even", ["E", 'v.n'], [0]);
+let _as = new Word("as", ["az"]);
+let go = new Word("go", ["gO"]);
+let by = new Word("by", ["bI"]);
+let good = new Word("good", ["gud"]);
+let less = new Word("less", ["les"]);
+let more = new Word("more", ["mOr"]);
+let than = new Word("than", ["Dan"]);
+let to = new Word("to", ["tU"]);
+let I = new Word("I", ["I"]);
+let a = new Word("a", ["."]);
+let from = new Word("from", ["fr.m"]);
+let of = new Word("of", [".v"]);
+let not = new Word("not", ["not"]);
+let will = new Word("will", ["wil"]);
+let me = new Word("me", ['mE']);
+let be = new Word("be", ['bE']);
+let no = new Word("no", ['nO']);
+let what = new Word("what", ['what']);
+let _for = new Word("for", ['fOR']);
+let my = new Word("my", ['mI']);
+let where = new Word("where", ['wAR']);
+let are = new Word("are", ['aR']);
+let how = new Word("how", ['haw']);
 
 export const common_words = {
     'the': the,
@@ -96,7 +108,18 @@ export const common_words = {
     "to": to,
     "I": I,
     "a": a,
-    "from": from
-
+    "from": from,
+    "of": of,
+    "not": not,
+    "will": will,
+    "me": me,
+    "be": be,
+    "no": no,
+    "what": what,
+    "for": _for,
+    "my": my,
+    "where": where,
+    "are": are,
+    "how": how
 
 }

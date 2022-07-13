@@ -11,5 +11,5 @@ p {
     position: absolute;
     display: inline-block;
     top: 100%;
-
+    cursor: inherit;
 }

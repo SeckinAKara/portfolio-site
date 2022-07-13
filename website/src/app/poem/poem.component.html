@@ -1,9 +1,9 @@
-<div (click)="clicked=1-clicked" (mouseout)="hoverWord([])">
-    <p class="overall" *ngFor="let line of poem.number_of_lines">
+<div class="overall" (click)="clicked=1-clicked" (mouseout)="hoverWord([])">
+    <p *ngFor="let line of poem.number_of_lines">
         <span [ngStyle]="{'text-align': poem.lines[line].align}" style="cursor:default">
             <div class="tooltip" *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])">
                 <poem-word-tooltip class="tooltiptext" *ngIf="currentHover([line, word])" [current_word]="poem.lines[line].words[word]" [clicked]="clicked"></poem-word-tooltip>
-                {{ poem.lines[line].words[word].full_spelling.replace(" ", " ") }}    
+                {{ poem.lines[line].words[word].fullSpelling().replace(" ", " ") }}    
                     <!--space is U+205F-->
             </div>
         </span>

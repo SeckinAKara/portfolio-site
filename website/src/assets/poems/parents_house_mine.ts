@@ -8,15 +8,15 @@ so i dance
 import { Full_Poem, Line, Line_Alignment, Pronunciation, Word } from "../../app/poem/poem_classes";
 import { common_words } from "../../app/poem/common_words";
 
-let night = new Word('night', new Pronunciation(['nIt']));
-let sky = new Word('sky', new Pronunciation(['skI']));
-let unfolds = new Word('unfolds', new Pronunciation(['Vn', 'fOldz'], [1]), '', '');
-let wrong = new Word('wrong', new Pronunciation(['roN']), '', '');
-let dance = new Word('dance', new Pronunciation(['dans']), '', '');
+let night = new Word('night', ['nIt']);
+let sky = new Word('sky', ['skI']);
+let unfolds = new Word('unfolds', ['Vn', 'fOldz'], [1], '', '');
+let wrong = new Word('wrong', ['roN'], [0], '', '');
+let dance = new Word('dance', ['dans'], [0], '', '');
 
-let line1 = new Line(1, [common_words.the, night, sky, unfolds], Line_Alignment.LEFT);
-let line2 = new Line(2, [common_words.but, common_words["i'm"], wrong], Line_Alignment.LEFT);
-let line3 = new Line(3, [common_words.yet, common_words.it, common_words.still, unfolds], Line_Alignment.LEFT);
-let line4 = new Line(4, [common_words.so, common_words.i, dance], Line_Alignment.LEFT);
+let line1 = new Line(1, [common_words.the, night, sky, unfolds]);
+let line2 = new Line(2, [common_words.but, common_words["i'm"], wrong]);
+let line3 = new Line(3, [common_words.yet, common_words.it, common_words.still, unfolds]);
+let line4 = new Line(4, [common_words.so, common_words.i, dance]);
 
 export const parents_house_mine = new Full_Poem("my parents' house was once also mine", [line1, line2, line3, line4], "May 2019");
