@@ -61,13 +61,21 @@ let line9 = new Line(8, [common_words.no, matter, common_words.what, common_word
 let sorry = new Word("sorry", ["so", "rE"]);
 let spoilers = new Word("spoilers", ["spoy", "l.Rz"]);
 let regardless = new Word("regardless", ["r.", "gard", "l.s"], [1]);
-let end = new Word("end", ["end"]);
-let line10 = new Line(9, [sorry, common_words.for, spoilers, common_words.but, regardless, common_words.but, "it's", common_words.my, end]);
 
+let end = new Word("end", ["end"]);
+let line10 = new Line(9, [sorry, common_words.for, spoilers, common_words.but, regardless, common_words.but, common_words["it's"], common_words.my, end]);
+
+let choose = new Word("choose", ["CUz"]);
+let chips = new Word("chips", ["Cips"]);
+let spent = new Word("spent", ["spent"]);
 let line11 = new Line(10, [common_words.i, common_words.will, choose, common_words.where, common_words.my, common_words.own, chips, common_words.are, spent]);
 
+let legally = new Word("legally", ["lE", "g.", "lE"]);
+let blood = new Word("blood", ["blVd"]);
+let type = new Word("type", ["tIp"]);
 let line12 = new Line(11, [legally, common_words.my, blood, type, common_words.will, common_words.be]);
 
+let asphalt = new Word("asphalt", ["as", "folt"]);
 let line13 = new Line(12, [asphalt]);
 
 

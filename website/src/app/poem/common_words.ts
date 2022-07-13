@@ -60,6 +60,7 @@ let my = new Word("my", ['mI']);
 let where = new Word("where", ['wAR']);
 let are = new Word("are", ['aR']);
 let how = new Word("how", ['haw']);
+let it_s = new Word("it's", ['its']);
 
 export const common_words = {
     'the': the,
@@ -120,6 +121,7 @@ export const common_words = {
     "my": my,
     "where": where,
     "are": are,
-    "how": how
+    "how": how,
+    "it's": it_s
 
 }
