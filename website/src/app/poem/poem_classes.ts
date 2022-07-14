@@ -62,7 +62,7 @@ export class Word {
 
   constructor(
               spelling: string = '', 
-              left_separator: string = "", right_separator: string = " ", primary_meaning: string = '', other_meanings: string[] = [],
+              left_separator: string = "", right_separator: string = "", primary_meaning: string = '', other_meanings: string[] = [],
               stressed_syllables: number[] = [0], ascii_pronunciation: string[] = [], spelled_pronunciation: string[] = [],
               punctuation:punctuation_map = {}, capitalization:number[] = [], language: Language = Language.ENGLISH
       ) {
@@ -85,8 +85,11 @@ export class Word {
                              + full_spelling.substring(this.capitalization[i], this.capitalization[i]+1).toUpperCase()
                              + full_spelling.substring(this.capitalization[i]+1);
     }
-
-    full_spelling = this.left_separator + full_spelling + this.right_separator;
+    let temp_right_sep = ' ';
+    if (this.right_separator != '') {
+      temp_right_sep = this.right_separator;
+    }
+    full_spelling = this.left_separator + full_spelling + temp_right_sep;
     return full_spelling;
   }
 
@@ -147,12 +150,33 @@ export class Full_Poem {
   number_of_lines: number[];
   creation_time: string;
 
-  constructor(title: string = '', lines: Line[] = [new Line()], creation_time = "N/A") {
+  constructor(title: string = 'index', lines: string[] = [], creation_time = "N/A") {
     this.title = title;
-    this.lines = lines;
+    this.lines = [];
     this.number_of_lines = Array(this.lines.length).fill(0).map((x,i)=>i);
     this.creation_time = creation_time;
+
+    let word_regex = /^(\s*)(\S*)(\s*)$/;
+    for (let textline:number = 0; textline < lines.length; textline++) {
+      let new_line: Line = new Line(textline, []);
+      let split_line: string[] = lines[textline].split(' ');
+      for (let textword:number = 0; textword < split_line.length; textword++) {
+        let word = split_line[textword]
+        let just_text_array = word_regex.exec(word);
+        if (just_text_array !== null) {
+          let new_left_separator:string = just_text_array[1];
+          let just_text:string = just_text_array[2];
+          let new_right_separator:string = just_text_array[3];
+          let new_word = new Word(just_text, new_left_separator, new_right_separator);
+          new_line.words.push(new_word);
+        }
+      }
+      new_line.number_of_words = Array(new_line.words.length).fill(0).map((x,i)=>i);
+      this.lines.push(new_line);
+    }
+    
   }
+
 }
 
 export type poem_map = {

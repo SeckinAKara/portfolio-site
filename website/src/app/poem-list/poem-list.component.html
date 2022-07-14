@@ -1,13 +1,9 @@
 <div>
     <ul style="cursor:pointer">
-        <li routerLink="/poems/parents_house_mine" (click)="updatePoem('parents_house_mine')">my parents' house was once also mine</li>
-        <li routerLink="/poems/pupas" (click)="updatePoem('pupas')">pupas</li>
-        <li routerLink="/poems/coming_out_depressive" (click)="updatePoem('coming_out_depressive')">coming out of a depressive episode</li>
-        <li routerLink="/poems/airplane_tray_table" (click)="updatePoem('airplane_tray_table')">airplane tray table</li>
-        <li routerLink="/poems/dust_bunny" (click)="updatePoem('dust_bunny')">dust bunny</li>
+        <li *ngFor="let title of poem_index.poem_map | keyvalue" routerLink="poems/"+title.key (click)="updatePoem(title.key)">{{ title.value.title }}</li>
     </ul>
     <br>
 </div>
 <p>
-    <poem [poemTitle]="poemTitle"></poem>
+    <poem [(poemTitle)]="poemTitle"></poem>
 </p>

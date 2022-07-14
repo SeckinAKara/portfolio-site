@@ -17,7 +17,6 @@ export class PoemInfoComponent extends PoemComponentTemplate {
 
   ipa_toggle() {
     this.key_in_ipa = !this.key_in_ipa;
-    console.log(this.key_in_ipa)
     if (this.key_in_ipa) {
       this.pronunciation_key = pronunciation_key_ipa;
     } else {

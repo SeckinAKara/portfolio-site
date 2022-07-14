@@ -18,10 +18,6 @@ const routes: Routes = [
   {
     path: 'poems', 
     redirectTo: 'poems/index'
-  },
-  {
-    path: '**',
-    redirectTo: '/'
   }
 ];
 

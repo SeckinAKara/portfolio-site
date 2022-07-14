@@ -1,19 +1,13 @@
 p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16pt;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 5pt;
+    margin-right: 5pt;
 }
 
 .overall {
-    padding-left: 5pt;
-    padding-right: 5pt;
     width: 100%;
     display: flex;
-}
-
-li {
-    font-size: 14
 }
 
 div {
@@ -25,11 +19,19 @@ div {
     display: inline-block;
   }
 
+.poem-word-underlined {
+    position: relative;
+    display: inline-block;
+    border-style: dotted;
+    border-color: black;
+    border-width: 0 0 2px 0;
+}
+
 .tooltiptext {
     position: relative;
     left: 100%;
     bottom: 20pt;
-    z-index: 1; 
+    z-index: 1;
 }
 
 poem-toolbar {

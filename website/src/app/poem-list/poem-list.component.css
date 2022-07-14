@@ -1,3 +1,7 @@
 ul {
     max-width: fit-content;
 }
+
+li {
+    font-size: 14
+}

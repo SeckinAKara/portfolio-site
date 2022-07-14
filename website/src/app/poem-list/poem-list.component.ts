@@ -1,6 +1,7 @@
 import { Component, Input, DoCheck, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Full_Poem } from '../poem/poem_classes';
+import { Full_Poem, PoemMap } from '../poem/poem_classes';
+import { index } from 'src/assets/poems';
 
 @Component({
   selector: 'poem-list',
@@ -12,14 +13,14 @@ export class PoemListComponent implements OnInit, DoCheck {
   @Input() poemTitle: string = 'index';
   @Output() poemTitleChange = new EventEmitter<string>();
   poem: Full_Poem = new Full_Poem('', []);
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
+  poem_index: PoemMap = index;
+  constructor(private router: Router) { 
     let preliminary_url = this.router.url;
     this.poemTitle = preliminary_url.split('/')[2];
     this.updatePoem(this.poemTitle);
   }
+
+  ngOnInit() {  }
 
   ngDoCheck() {
     this.updatePoem(this.poemTitle);

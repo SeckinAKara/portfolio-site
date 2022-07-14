@@ -1,11 +1,11 @@
-<div class="overall">
-    <poem-toolbar [(poemSettings)]="poemSettings"></poem-toolbar>
+<div *ngIf="poem !== undefined" class="overall">
+    <poem-toolbar [(poemTitle)]="poemTitle" [(poemSettings)]="poemSettings"></poem-toolbar>
     <div (click)="poemSettings.clicked=1-poemSettings.clicked" (mouseout)="hoverWord([])">
         <p *ngFor="let line of poem.number_of_lines">
             <span [ngStyle]="{'text-align': poem.lines[line].align, 'cursor': 'default'}">
-                <span class="poem-word" *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])">
-                    <poem-word-tooltip class="tooltiptext" 
-                                        [ngStyle]="{'border-bottom': poem.lines[line].words[word].primary_meaning.length > 0 ? '3px black' : '0px'}"
+                <span *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])"
+                        [ngClass]="poem.lines[line].words[word].primary_meaning.length > 0 ? 'poem-word-underlined' : 'poem-word' ">
+                    <poem-word-tooltip class="tooltiptext"
                                         *ngIf="currentHover([line, word])" 
                                         [(poemSettings)]="poemSettings" 
                                         [current_word]="poem.lines[line].words[word]">

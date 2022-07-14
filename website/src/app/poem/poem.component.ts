@@ -9,13 +9,14 @@ import { Full_Poem, PoemSettings, Word } from './poem_classes';
 })
 export class PoemComponentTemplate implements OnChanges {
   @Input() poemTitle: string = 'index';
+  @Output() poemTitleChange = new EventEmitter<string>();
   poem: Full_Poem = new Full_Poem('index');
 
   @Input() poemSettings = new PoemSettings();
   @Output() poemSettingsChange = new EventEmitter<PoemSettings>();
 
   ngOnChanges(changes: SimpleChanges) {
-    //console.log(changes);
+    console.log(changes);
   }
 
 }
@@ -27,7 +28,10 @@ export class PoemComponentTemplate implements OnChanges {
 })
 export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCheck  {
 
-  constructor(private http: FileGrabberService) { super()  }
+  constructor(private http: FileGrabberService) { 
+    super();
+    this.getPoem();
+  }
 
   ngOnInit(): void {
     this.getPoem();
@@ -38,7 +42,7 @@ export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCh
   }
 
   getPoem(): void {
-    if (this.poem.title !== this.poemTitle) {
+    if ((this.poem !== undefined) && (this.poem.title !== this.poemTitle) || (this.poem.title == 'index')) {
       this.poem = this.http.getPoem(this.poemTitle);
     }
   }
