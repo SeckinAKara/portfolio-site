@@ -1,33 +1,33 @@
-import { Component, Input, OnChanges, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, DoCheck, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Full_Poem, Word } from '../poem/poem_classes';
+import { Full_Poem } from '../poem/poem_classes';
 
 @Component({
   selector: 'poem-list',
   templateUrl: './poem-list.component.html',
   styleUrls: ['./poem-list.component.css']
 })
-export class PoemListComponent implements OnInit, OnChanges {
+export class PoemListComponent implements OnInit, DoCheck {
 
-  @Input() poem_title: string = 'index';
-  @Output() poem_titleChange = new EventEmitter<string>();
+  @Input() poemTitle: string = 'index';
+  @Output() poemTitleChange = new EventEmitter<string>();
   poem: Full_Poem = new Full_Poem('', []);
 
   constructor(private router: Router) { }
 
   ngOnInit() {
     let preliminary_url = this.router.url;
-    this.poem_title = preliminary_url.split('/')[2];
-    this.updatePoem(this.poem_title);
+    this.poemTitle = preliminary_url.split('/')[2];
+    this.updatePoem(this.poemTitle);
   }
 
-  ngOnChanges() {
-    this.updatePoem(this.poem_title);
+  ngDoCheck() {
+    this.updatePoem(this.poemTitle);
   }
 
-  updatePoem(poem_title: string) {
-    this.poem_title = poem_title;
-    this.poem_titleChange.emit(this.poem_title);
+  updatePoem(poemTitle: string) {
+    this.poemTitle = poemTitle;
+    this.poemTitleChange.emit(this.poemTitle);
   }
 
 }

@@ -8,11 +8,11 @@ so i dance
 import { Full_Poem, Line, Line_Alignment, Pronunciation, Word } from "../../app/poem/poem_classes";
 import { common_words } from "../../app/poem/common_words";
 
-let night = new Word('night', ['nIt']);
-let sky = new Word('sky', ['skI']);
-let unfolds = new Word('unfolds', ['Vn', 'fOldz'], [1], '', '');
-let wrong = new Word('wrong', ['roN'], [0], '', '');
-let dance = new Word('dance', ['dans'], [0], '', '');
+let night = new Word('night');
+let sky = new Word('sky');
+let unfolds = new Word('unfolds', '', '');
+let wrong = new Word('wrong', '', '');
+let dance = new Word('dance', '', '');
 
 let line1 = new Line(1, [common_words.the, night, sky, unfolds]);
 let line2 = new Line(2, [common_words.but, common_words["i'm"], wrong]);

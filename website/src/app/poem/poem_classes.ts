@@ -31,13 +31,13 @@ export enum Line_Alignment {
 export class Pronunciation {
   ipa: string[];
   spelled: string[];
-  english: boolean;
   stressed_syllables: number[];
+  english: boolean;
 
-  constructor(ipa: string[], stressed_syllables: number[] = [0], spelled: string[] = [], english: boolean = true) {
+  constructor(ipa: string[], spelled: string[], stressed_syllables: number[] = [0], english: boolean = true) {
       this.ipa = ipa;
-      this.stressed_syllables = stressed_syllables;
       this.spelled = spelled;
+      this.stressed_syllables = stressed_syllables;
       this.english = english;
   }
 }
@@ -61,19 +61,20 @@ export class Word {
   full_spelling: string = '';
 
   constructor(
-              spelling: string, pronunciation: string[], stressed_syllables: number[] = [0], left_separator: string = "", right_separator: string = " ", 
-              primary_meaning: string = '', other_meanings: string[] = [], language: Language = Language.ENGLISH,
-              punctuation:punctuation_map = {}, capitalization:number[] = []
+              spelling: string = '', 
+              left_separator: string = "", right_separator: string = " ", primary_meaning: string = '', other_meanings: string[] = [],
+              stressed_syllables: number[] = [0], ascii_pronunciation: string[] = [], spelled_pronunciation: string[] = [],
+              punctuation:punctuation_map = {}, capitalization:number[] = [], language: Language = Language.ENGLISH
       ) {
       this.spelling = spelling;
-      this.pronunciation = new Pronunciation(pronunciation, stressed_syllables);
       this.left_separator = left_separator;
       this.right_separator = right_separator;
       this.primary_meaning = primary_meaning;
       this.other_meanings = other_meanings;
-      this.language = language;
+      this.pronunciation = new Pronunciation(ascii_pronunciation, spelled_pronunciation, stressed_syllables);
       this.punctuation = punctuation;
       this.capitalization = capitalization;
+      this.language = language;
   }
 
 
@@ -113,15 +114,14 @@ export class Word {
   public copyWord(): Word {
     let newWord = new Word(
       this.spelling,
-      this.pronunciation.ipa,
-      this.pronunciation.stressed_syllables,
       this.left_separator,
       this.right_separator,
       this.primary_meaning,
       this.other_meanings,
-      this.language,
+      this.pronunciation.stressed_syllables, this.pronunciation.ipa, this.pronunciation.spelled,
       this.punctuation,
-      this.capitalization
+      this.capitalization,
+      this.language
       );
     return newWord;
   }
@@ -133,7 +133,7 @@ export class Line {
   number_of_words: number[];
   align: Line_Alignment;
 
-  constructor(nth: number = 0, words: Word[], align: Line_Alignment = Line_Alignment.LEFT){
+  constructor(nth: number = 0, words: Word[] = [], align: Line_Alignment = Line_Alignment.LEFT){
     this.nth = nth;  
     this.words = words;
     this.number_of_words = Array(this.words.length).fill(0).map((x,i)=>i);
@@ -147,7 +147,7 @@ export class Full_Poem {
   number_of_lines: number[];
   creation_time: string;
 
-  constructor(title: string, lines: Line[], creation_time = "N/A") {
+  constructor(title: string = '', lines: Line[] = [new Line()], creation_time = "N/A") {
     this.title = title;
     this.lines = lines;
     this.number_of_lines = Array(this.lines.length).fill(0).map((x,i)=>i);
@@ -162,8 +162,22 @@ export type poem_map = {
 export class PoemMap {
   poem_map:poem_map;
 
-  constructor(poem_map:poem_map = {"index": new Full_Poem("index", [new Line(0, [new Word('', [''])], Line_Alignment.LEFT)])}) { 
+  constructor(poem_map:poem_map = {"index": new Full_Poem()}) { 
     this.poem_map = poem_map;
+  }
+}
+
+export class PoemSettings {
+  ascii_pronunciation: boolean;
+  rhyme_colors: boolean;
+  hovering: number[];
+  clicked: number;
+
+  constructor(ascii_pronunciation = false, rhyme_colors = false, hovering = [], clicked = 0) {
+    this.ascii_pronunciation = ascii_pronunciation;
+    this.rhyme_colors = rhyme_colors;
+    this.hovering = hovering;
+    this.clicked = clicked;
   }
 }
 

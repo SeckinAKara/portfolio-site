@@ -1,11 +1,20 @@
-<div class="overall" (click)="clicked=1-clicked" (mouseout)="hoverWord([])">
-    <p *ngFor="let line of poem.number_of_lines">
-        <span [ngStyle]="{'text-align': poem.lines[line].align}" style="cursor:default">
-            <div class="tooltip" *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])">
-                <poem-word-tooltip class="tooltiptext" *ngIf="currentHover([line, word])" [current_word]="poem.lines[line].words[word]" [clicked]="clicked"></poem-word-tooltip>
-                {{ poem.lines[line].words[word].fullSpelling().replace(" ", " ") }}    
-                    <!--space is U+205F-->
-            </div>
-        </span>
-    </p>
+<div class="overall">
+    <poem-toolbar [(poemSettings)]="poemSettings"></poem-toolbar>
+    <div (click)="poemSettings.clicked=1-poemSettings.clicked" (mouseout)="hoverWord([])">
+        <p *ngFor="let line of poem.number_of_lines">
+            <span [ngStyle]="{'text-align': poem.lines[line].align, 'cursor': 'default'}">
+                <span class="poem-word" *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])">
+                    <poem-word-tooltip class="tooltiptext" 
+                                        [ngStyle]="{'border-bottom': poem.lines[line].words[word].primary_meaning.length > 0 ? '3px black' : '0px'}"
+                                        *ngIf="currentHover([line, word])" 
+                                        [(poemSettings)]="poemSettings" 
+                                        [current_word]="poem.lines[line].words[word]">
+                    </poem-word-tooltip>
+                        {{ poem.lines[line].words[word].fullSpelling().replace(" ", " ") }}    
+                        <!--space is U+205F-->
+                </span>
+            </span>
+        </p>
+    </div>
+    <poem-info [(poemSettings)]="poemSettings" [poem]="poem"></poem-info>
 </div>

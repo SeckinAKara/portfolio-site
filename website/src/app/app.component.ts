@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { FileGrabberService } from './file-grabber.service';
 
 @Component({
   selector: 'app-root',

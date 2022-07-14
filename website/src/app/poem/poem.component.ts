@@ -1,42 +1,57 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, DoCheck, OnChanges, SimpleChanges } from '@angular/core';
 import { FileGrabberService } from '../file-grabber.service';
-import { Full_Poem, Word } from './poem_classes';
+import { Full_Poem, PoemSettings, Word } from './poem_classes';
+
+@Component({
+  selector: 'poem-component-template',
+  templateUrl: './poem-component-template.component.html',
+  styleUrls: ['./poem-component-template.component.css']
+})
+export class PoemComponentTemplate implements OnChanges {
+  @Input() poemTitle: string = 'index';
+  poem: Full_Poem = new Full_Poem('index');
+
+  @Input() poemSettings = new PoemSettings();
+  @Output() poemSettingsChange = new EventEmitter<PoemSettings>();
+
+  ngOnChanges(changes: SimpleChanges) {
+    //console.log(changes);
+  }
+
+}
 
 @Component({
   selector: 'poem',
   templateUrl: './poem.component.html',
   styleUrls: ['./poem.component.css']
 })
-export class PoemComponent implements OnInit, OnChanges {
+export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCheck  {
 
-  @Input() poem_title: string = 'index';
-  poem: Full_Poem = new Full_Poem('', []);
-  hovering: number[] = [];
-  clicked: number = 0;
-
-  constructor(private http: FileGrabberService) {   }
+  constructor(private http: FileGrabberService) { super()  }
 
   ngOnInit(): void {
     this.getPoem();
   }
 
-  ngOnChanges(): void {
+  ngDoCheck(): void {
     this.getPoem();
   }
 
   getPoem(): void {
-    this.poem = this.http.getPoem(this.poem_title);
+    if (this.poem.title !== this.poemTitle) {
+      this.poem = this.http.getPoem(this.poemTitle);
+    }
   }
 
   hoverWord(word_index:number[]): void {
-    this.hovering = word_index;
+    this.poemSettings.hovering = word_index;
   }
 
   currentHover(word_index:number[]): boolean {
-    if (this.hovering.length == 2) {
-      return ((word_index[0] === this.hovering[0]) && (word_index[1] === this.hovering[1]));
+    if (this.poemSettings.hovering.length == 2) {
+      return ((word_index[0] === this.poemSettings.hovering[0]) && (word_index[1] === this.poemSettings.hovering[1]));
     } else {
-      this.clicked = 0;
+      this.poemSettings.clicked = 0;
       return false;
     }
   }

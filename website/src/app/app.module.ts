@@ -11,7 +11,9 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
 import { PoemInfoComponent } from './poem-info/poem-info.component';
 import { PoemWordTooltipComponent } from './poem-word-tooltip/poem-word-tooltip.component';
-
+import { PoemToolbarComponent } from './poem-toolbar/poem-toolbar.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { PoemWordTooltipComponent } from './poem-word-tooltip/poem-word-tooltip.
     PoemListComponent,
     PoemInfoComponent,
     PoemWordTooltipComponent,
+    PoemToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,9 @@ import { PoemWordTooltipComponent } from './poem-word-tooltip/poem-word-tooltip.
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatSlideToggleModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
 <div>
-    <p [ngStyle]="{'font-style': clicked == 0 && current_word.primary_meaning.length > 0 ? 'italic' : 'normal'}">{{ output_text[0] }}</p>
-    <p *ngIf="clicked > 0">{{ output_text[1] }}</p>
+    <span [ngStyle]="{'font-style': poemSettings.clicked === 0 && current_word.primary_meaning.length > 0 ? 'italic' : 'normal'}">
+        <p *ngIf="poemSettings.ascii_pronunciation">{{ current_word.pronunciation.ipa.join('_') }}</p>
+        <p *ngIf="!poemSettings.ascii_pronunciation">{{ current_word.pronunciation.spelled.join('_') }}</p>
+        <p *ngIf="poemSettings.clicked > 0">{{ current_word.primary_meaning }}</p>
+    </span>
 </div>
