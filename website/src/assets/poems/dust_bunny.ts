@@ -16,11 +16,12 @@ let full_poem_text = [
 "asphalt"
 ]
 
-export const dust_bunny = new Full_Poem("dust bunny", full_poem_text, "December 2021");
-dust_bunny.lines[0].words[4] = new Word("kin", '', ' ', 'related to');
-dust_bunny.lines[1].words[2] = new Word("conducive", '', ' ', "helpful", [], [1], ["k.n", "dU", "siv"], ["kun", "DOO", "siv"]);
-dust_bunny.lines[3].words[0] = new Word("beat", '', ' ', 'beaten');
-dust_bunny.lines[3].words[1] = new Word("till", '', ' ', "until");
-dust_bunny.lines[6].words[1] = new Word("hearse", '', '', 'funeral car', [], [0], ["h.Rs"], ["herss"]);
-dust_bunny.lines[9].words[2] = new Word("spoilers", '', ' ', 'revealing ending too soon');
-dust_bunny.lines[12].words[0] = new Word("asphalt", '', '', 'pavement');
+export const full_poem = new Full_Poem();
+full_poem.parsePoem("dust bunny", full_poem_text, "December 2021");
+full_poem.lines[0].words[4] = new Word("kin", '', ' ', 'related to');
+full_poem.lines[1].words[2] = new Word("conducive", '', ' ', "helpful", [], [1], ["k.n", "dU", "siv"], ["kun", "DOO", "siv"]);
+full_poem.lines[3].words[0] = new Word("beat", '', ' ', 'beaten');
+full_poem.lines[3].words[1] = new Word("till", '', ' ', "until");
+full_poem.lines[6].words[1] = new Word("hearse", '', '', 'funeral car', [], [0], ["h.Rs"], ["herss"]);
+full_poem.lines[9].words[2] = new Word("spoilers", '', ' ', 'revealing ending too soon');
+full_poem.lines[12].words[0] = new Word("asphalt", '', '', 'pavement');

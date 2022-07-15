@@ -35,6 +35,7 @@ let full_poem_text = [
 "And that’s okay"
 ]
 
-export const happy_coming_out = new Full_Poem("a happy coming out story", full_poem_text, "2019");
-happy_coming_out.lines[5].words[6] = new Word("doppelganger", '', '', 'magical clone', [], [0, 2], ['dop', '.l', 'gaN', '.R'], ["DOPple", "GANGer"]);
-happy_coming_out.lines[7].words[0] = new Word("Appending", '', '', 'adding', [], [1], ['.', 'pen', 'diN'], ["uh", "PEN", "ding"]);
+export const full_poem = new Full_Poem();
+full_poem.parsePoem("a happy coming out story", full_poem_text, "2019");
+full_poem.lines[5].words[6] = new Word("doppelganger", '', '', 'magical clone', [], [0, 2], ['dop', '.l', 'gaN', '.R'], ["DOPple", "GANGer"]);
+full_poem.lines[7].words[0] = new Word("Appending", '', '', 'adding', [], [1], ['.', 'pen', 'diN'], ["uh", "PEN", "ding"]);

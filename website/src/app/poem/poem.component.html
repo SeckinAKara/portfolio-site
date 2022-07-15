@@ -1,4 +1,4 @@
-<div *ngIf="poem !== undefined" class="overall">
+<div class="overall">
     <poem-toolbar [(poemTitle)]="poemTitle" [(poemSettings)]="poemSettings"></poem-toolbar>
     <div (click)="poemSettings.clicked=1-poemSettings.clicked" (mouseout)="hoverWord([])">
         <p *ngFor="let line of poem.number_of_lines">
@@ -16,5 +16,5 @@
             </span>
         </p>
     </div>
-    <poem-info [(poemSettings)]="poemSettings" [poem]="poem"></poem-info>
+    <poem-info [(poemSettings)]="poemSettings" [(poem)]="poem"></poem-info>
 </div>

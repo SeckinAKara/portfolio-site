@@ -6,5 +6,6 @@ let full_poem_text = [
 "Slowly slide edgeways"
 ]
 
-export var airplane_tray_table = new Full_Poem("airplane tray table", full_poem_text, "March 2018");
-airplane_tray_table.lines[2].words[2] = new Word("edgeways", '', '', 'towards the edge', [], [0, 1], ["ej", "wAz"], ['EDGE', 'ways']);
+export const full_poem = new Full_Poem()
+full_poem.parsePoem("airplane tray table", full_poem_text, "March 2018");
+full_poem.lines[2].words[2] = new Word("edgeways", '', '', 'towards the edge', [], [0, 1], ["ej", "wAz"], ['EDGE', 'ways']);

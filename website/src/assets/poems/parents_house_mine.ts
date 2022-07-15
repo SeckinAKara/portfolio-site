@@ -6,4 +6,5 @@ let full_poem_text = [
 "yet it still unfolds",
 "so i dance"
 ]
-export var parents_house_mine = new Full_Poem("my parents' house was once also mine", full_poem_text, "May 2019");
+export const full_poem = new Full_Poem();
+full_poem.parsePoem("my parents' house was once also mine", full_poem_text, "May 2019");

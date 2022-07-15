@@ -18,10 +18,11 @@ let full_poem_text = [
 "we just return"
 ]
 
-export const pupas = new Full_Poem("pupas", full_poem_text, "Aug 2018");
-pupas.lines[0].words[0] = new Word('queers', '', ' ', "LGBTQ+ community");
-pupas.lines[13].words[0] = pupas.lines[0].words[0];
-pupas.lines[9].words[2] = new Word("polyhedra", '', '', "3D shapes", [], [2], ['pol', 'E', 'hE', 'dr.'], ["polly", "HEED", "ruh"]);
-pupas.lines[10].words[0] = new Word("lichenic", '', '', "like a lichen", [], [1], ['lI', 'ke', 'nik'], ['lie', 'KEN', 'ik']);
-pupas.lines[11].words[0] = new Word("archaea", '', '', "ancient microorganisms", [], [1], ['aR', 'kE', '.'], ['arr', 'KEE', 'uh']);
-pupas.lines[12].words[4].primary_meaning = "half-written";
+export const full_poem = new Full_Poem();
+full_poem.parsePoem("pupas", full_poem_text, "Aug 2018");
+full_poem.lines[0].words[0] = new Word('queers', '', ' ', "LGBTQ+ community");
+full_poem.lines[13].words[0] = full_poem.lines[0].words[0];
+full_poem.lines[9].words[2] = new Word("polyhedra", '', '', "3D shapes", [], [2], ['pol', 'E', 'hE', 'dr.'], ["polly", "HEED", "ruh"]);
+full_poem.lines[10].words[0] = new Word("lichenic", '', '', "like a lichen", [], [1], ['lI', 'ke', 'nik'], ['lie', 'KEN', 'ik']);
+full_poem.lines[11].words[0] = new Word("archaea", '', '', "ancient microorganisms", [], [1], ['aR', 'kE', '.'], ['arr', 'KEE', 'uh']);
+full_poem.lines[12].words[4].primary_meaning = "half-written";

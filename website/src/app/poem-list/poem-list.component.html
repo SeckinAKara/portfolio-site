@@ -1,9 +1,9 @@
 <div>
     <ul style="cursor:pointer">
-        <li *ngFor="let title of poem_index.poem_map | keyvalue" routerLink="poems/"+title.key (click)="updatePoem(title.key)">{{ title.value.title }}</li>
+        <li *ngFor="let title of valid_poem_index.poem_map | keyvalue" [routerLink]="['/poems/', title.key]" (click)="updatePoem(title.key)">{{ title.value.title }}</li>
     </ul>
     <br>
 </div>
 <p>
-    <poem [(poemTitle)]="poemTitle"></poem>
+    <poem [poemTitle]="poemTitle"></poem>
 </p>

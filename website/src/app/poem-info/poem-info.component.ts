@@ -13,7 +13,7 @@ export class PoemInfoComponent extends PoemComponentTemplate {
 
   key_in_ipa: boolean = false;
   pronunciation_key: string[] = pronunciation_key_spelled;
-  @Input() override poem: Full_Poem = new Full_Poem('index');
+  @Input() override poem: Full_Poem = new Full_Poem();
 
   ipa_toggle() {
     this.key_in_ipa = !this.key_in_ipa;

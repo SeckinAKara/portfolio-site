@@ -1,5 +1,7 @@
   // See ipa-guide.ts for ASCII phonetic layout
 
+import { Component, OnInit } from "@angular/core";
+
 export enum Language {
   ENGLISH = 1,
   SPANISH,
@@ -144,22 +146,21 @@ export class Line {
   }
 }
 
+
 export class Full_Poem {
-  title: string;
-  lines: Line[];
-  number_of_lines: number[];
-  creation_time: string;
+  title: string = 'index';
+  lines: Line[] = [];
+  number_of_lines: number[] = [];
+  creation_time: string = 'N/A';
 
-  constructor(title: string = 'index', lines: string[] = [], creation_time = "N/A") {
+  parsePoem(title: string, raw_lines: string[], creation_time: string): void {
     this.title = title;
-    this.lines = [];
-    this.number_of_lines = Array(this.lines.length).fill(0).map((x,i)=>i);
     this.creation_time = creation_time;
-
+    this.lines = [];
     let word_regex = /^(\s*)(\S*)(\s*)$/;
-    for (let textline:number = 0; textline < lines.length; textline++) {
+    for (let textline:number = 0; textline < raw_lines.length; textline++) {
       let new_line: Line = new Line(textline, []);
-      let split_line: string[] = lines[textline].split(' ');
+      let split_line: string[] = raw_lines[textline].split(' ');
       for (let textword:number = 0; textword < split_line.length; textword++) {
         let word = split_line[textword]
         let just_text_array = word_regex.exec(word);
@@ -174,7 +175,7 @@ export class Full_Poem {
       new_line.number_of_words = Array(new_line.words.length).fill(0).map((x,i)=>i);
       this.lines.push(new_line);
     }
-    
+    this.number_of_lines = Array(this.lines.length).fill(0).map((x,i)=>i);
   }
 
 }
@@ -184,10 +185,15 @@ export type poem_map = {
 };
 
 export class PoemMap {
-  poem_map:poem_map;
+  public poem_map:poem_map;
 
-  constructor(poem_map:poem_map = {"index": new Full_Poem()}) { 
+  constructor(poem_map:poem_map = {}) { 
     this.poem_map = poem_map;
+  }
+
+  hasTitle(check_title: string): boolean {
+    let result = this.poem_map[check_title];
+    return (result !== undefined);
   }
 }
 

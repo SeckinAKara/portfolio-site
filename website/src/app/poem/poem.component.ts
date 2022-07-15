@@ -3,21 +3,18 @@ import { FileGrabberService } from '../file-grabber.service';
 import { Full_Poem, PoemSettings, Word } from './poem_classes';
 
 @Component({
-  selector: 'poem-component-template',
-  templateUrl: './poem-component-template.component.html',
-  styleUrls: ['./poem-component-template.component.css']
+  selector: 'poem-template-nonusable',
+  template: "<div>Don't display this component!</div>",
 })
-export class PoemComponentTemplate implements OnChanges {
+export class PoemComponentTemplate {
   @Input() poemTitle: string = 'index';
   @Output() poemTitleChange = new EventEmitter<string>();
-  poem: Full_Poem = new Full_Poem('index');
+  
+  @Input() poem: Full_Poem = new Full_Poem();
+  @Output() poemChange = new EventEmitter<Full_Poem>();
 
   @Input() poemSettings = new PoemSettings();
   @Output() poemSettingsChange = new EventEmitter<PoemSettings>();
-
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
-  }
 
 }
 
@@ -30,7 +27,6 @@ export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCh
 
   constructor(private http: FileGrabberService) { 
     super();
-    this.getPoem();
   }
 
   ngOnInit(): void {
@@ -42,9 +38,7 @@ export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCh
   }
 
   getPoem(): void {
-    if ((this.poem !== undefined) && (this.poem.title !== this.poemTitle) || (this.poem.title == 'index')) {
-      this.poem = this.http.getPoem(this.poemTitle);
-    }
+    this.poem = this.http.getPoem(this.poemTitle);
   }
 
   hoverWord(word_index:number[]): void {
