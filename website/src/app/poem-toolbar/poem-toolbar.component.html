@@ -8,7 +8,22 @@
     <span style="font-family:'Courier New', Courier, monospace">ASCII <mat-slide-toggle color="accent" [checked]="!ascii" (change)="updateSettings('ascii')"></mat-slide-toggle> Spelled</span>
 </p>
 <br>
-<P>
+<p>
     Rhyme Colors 
     <mat-slide-toggle color="accent" (change)="updateSettings('rhyme_colors')"></mat-slide-toggle>
-</P>
+</p>
+<div>
+    <p class="info-box">Poem Title: {{ poem.title }}</p>
+    <p class="info-box">Creation Time: {{ poem.creation_time }}</p>
+    <span>
+        ~~~~~~~~!!!Pronunciation Key!!!~~~~~~~~
+        <br>
+        In IPA?
+        <span style="font-family:'Courier New', Courier, monospace">No <mat-slide-toggle color="accent" (change)="ipa_toggle()"></mat-slide-toggle> Yes</span>
+        <br>
+        <span *ngFor="let line of pronunciation_key">
+            {{ line }}
+            <br>
+        </span>
+    </span>
+</div>

@@ -9,7 +9,6 @@ import { PoemListComponent } from './poem-list/poem-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button'
 import { MatIconModule } from '@angular/material/icon';
-import { PoemInfoComponent } from './poem-info/poem-info.component';
 import { PoemWordTooltipComponent } from './poem-word-tooltip/poem-word-tooltip.component';
 import { PoemToolbarComponent } from './poem-toolbar/poem-toolbar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
@@ -20,7 +19,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     PoemComponent,
     PoemListComponent,
-    PoemInfoComponent,
     PoemWordTooltipComponent,
     PoemToolbarComponent,
   ],

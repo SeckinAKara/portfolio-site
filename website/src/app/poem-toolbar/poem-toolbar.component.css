@@ -1,4 +1,20 @@
 p {
-    padding-left: 5%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 2pt;
+}
+
+span {
+    font-family:'Courier New', Courier, monospace;
+    text-align: left;
+    flex-wrap: column;
+    padding: 2pt;
+}
+
+div {
+    border-left: 2pt;
+}
+
+.info-box {
+    background-color: white;
+    color: var(--axo-dark);
 }

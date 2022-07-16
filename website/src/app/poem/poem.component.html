@@ -1,6 +1,5 @@
 <div class="overall">
-    <poem-toolbar [(poemTitle)]="poemTitle" [(poemSettings)]="poemSettings"></poem-toolbar>
-    <div (click)="poemSettings.clicked=1-poemSettings.clicked" (mouseout)="hoverWord([])">
+    <div class="poem-section" (click)="poemSettings.clicked=1-poemSettings.clicked" (mouseout)="hoverWord([])">
         <p *ngFor="let line of poem.number_of_lines">
             <span [ngStyle]="{'text-align': poem.lines[line].align, 'cursor': 'default'}">
                 <span *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])"
@@ -16,5 +15,5 @@
             </span>
         </p>
     </div>
-    <poem-info [(poemSettings)]="poemSettings" [(poem)]="poem"></poem-info>
+        <poem-toolbar class="poem-toolbar-section" [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
 </div>

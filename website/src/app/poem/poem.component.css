@@ -6,12 +6,17 @@ p {
 }
 
 .overall {
-    width: 100%;
     display: flex;
 }
 
-div {
-    width: 65%;
+.poem-section {
+    width: 75%;
+    border-left: 1pt black solid;
+    border-right: 1pt black solid;
+}
+
+.poem-toolbar-section {
+    width: 25%;
 }
 
 .poem-word {
@@ -32,15 +37,4 @@ div {
     left: 100%;
     bottom: 20pt;
     z-index: 1;
-}
-
-poem-toolbar {
-    width: 15%;
-    border-right: solid black 1pt;
-}
-
-poem-info {
-    width: 20%;
-    border-left: solid black 1pt;
-    position: relative;
 }

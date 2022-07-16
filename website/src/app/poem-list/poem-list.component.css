@@ -1,7 +1,18 @@
 ul {
-    max-width: fit-content;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
 }
 
 li {
     font-size: 14
+}
+
+div {
+    width: 100%;
+    display: inline-flex;
+}
+
+poem {
+    width: 80%;
 }

@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PoemComponentTemplate } from '../poem/poem.component';
+import { pronunciation_key_ipa, pronunciation_key_spelled } from '../poem/ipa-guide';
+import { Full_Poem } from '../poem/poem_classes';
+
 
 @Component({
   selector: 'poem-toolbar',
@@ -10,7 +13,9 @@ export class PoemToolbarComponent extends PoemComponentTemplate {
 
   ascii: boolean = false;
   rhymes: boolean = false;
-
+  key_in_ipa: boolean = false;
+  pronunciation_key: string[] = pronunciation_key_spelled;
+  @Input() override poem: Full_Poem = new Full_Poem();
 
   updateSettings(property: string) {
     if (property == 'ascii') {
@@ -26,4 +31,14 @@ export class PoemToolbarComponent extends PoemComponentTemplate {
       this.poemTitleChange.emit(this.poemTitle);
     }
   }
+
+  ipa_toggle() {
+    this.key_in_ipa = !this.key_in_ipa;
+    if (this.key_in_ipa) {
+      this.pronunciation_key = pronunciation_key_ipa;
+    } else {
+      this.pronunciation_key = pronunciation_key_spelled;
+    }
+  }
+
 }
