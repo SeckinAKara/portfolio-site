@@ -5,6 +5,9 @@ import { full_poem as pupas } from "./pupas";
 import { full_poem as airplane_tray_table } from './airplane_tray_table';
 import { full_poem as dust_bunny } from './dust_bunny';
 import { full_poem as happy_coming_out } from './happy_coming_out';
+import { full_poem as discourse_generation } from './discourse_generation';
+import { full_poem as forget_me } from './forget_me';
+import { full_poem as gingerbread_covid } from './gingerbread_covid';
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
 let valid_poem_index: poem_map = {};
@@ -25,6 +28,15 @@ valid_poem_index['dust_bunny'] = dust_bunny;
 
 full_poem_index['happy_coming_out'] = happy_coming_out;
 valid_poem_index['happy_coming_out'] = happy_coming_out;
+
+full_poem_index['discourse_generation'] = discourse_generation;
+valid_poem_index['discourse_generation'] = discourse_generation;
+
+full_poem_index['forget_me'] = forget_me;
+valid_poem_index['forget_me'] = forget_me;
+
+full_poem_index['gingerbread_covid'] = gingerbread_covid;
+valid_poem_index['gingerbread_covid'] = gingerbread_covid;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);
