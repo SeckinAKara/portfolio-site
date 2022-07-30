@@ -13,3 +13,11 @@ p {
     top: 100%;
     cursor: inherit;
 }
+
+.italicized span {
+    font-style: italic;
+}
+
+div {
+    width: 100%;
+}
