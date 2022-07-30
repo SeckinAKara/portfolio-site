@@ -23,11 +23,11 @@ export enum Relationship_Type {
 }
 
 export enum Line_Alignment {
-  LEFT = 1,
-  CENTER,
-  RIGHT,
-  JUSTIFY,
-  FREEFORM
+  LEFT = 'left',
+  CENTER = 'center',
+  RIGHT = 'right',
+  JUSTIFY = 'justify',
+  FREEFORM = 'freeform'
 }
 
 export class Pronunciation {
@@ -136,7 +136,7 @@ export class Line {
   nth: number;
   words: Word[];
   number_of_words: number[];
-  align: Line_Alignment;
+  align: string;
 
   constructor(nth: number = 0, words: Word[] = [], align: Line_Alignment = Line_Alignment.LEFT){
     this.nth = nth;  
@@ -153,13 +153,13 @@ export class Full_Poem {
   number_of_lines: number[] = [];
   creation_time: string = 'N/A';
 
-  parsePoem(title: string, raw_lines: string[], creation_time: string): void {
+  parsePoem(title: string, raw_lines: string[], creation_time: string, alignment: Line_Alignment = Line_Alignment.LEFT): void {
     this.title = title;
     this.creation_time = creation_time;
     this.lines = [];
     let word_regex = /^(\s*)(\S*)(\s*)$/;
     for (let textline:number = 0; textline < raw_lines.length; textline++) {
-      let new_line: Line = new Line(textline, []);
+      let new_line: Line = new Line(textline, [], alignment);
       let split_line: string[] = raw_lines[textline].split(' ');
       for (let textword:number = 0; textword < split_line.length; textword++) {
         let word = split_line[textword]

@@ -1,4 +1,4 @@
-import { Full_Poem, Word } from "src/app/poem/poem_classes";
+import { Full_Poem, Line, Line_Alignment, Word } from "src/app/poem/poem_classes";
 
 let full_poem_text = [
 "look for me in your eyelids",
@@ -19,7 +19,7 @@ let full_poem_text = [
 ]
 
 export const full_poem = new Full_Poem();
-full_poem.parsePoem("assigned ultimatum at birth", full_poem_text, "July 27, 2022");
+full_poem.parsePoem("assigned ultimatum at birth", full_poem_text, "July 27, 2022", Line_Alignment.LEFT);
 full_poem.lines[2].words[1] = new Word("stigmata", '', '', "holes in hands from crucifixion", [], [1], ['stig', 'mW', 't.'], ['stig', 'MAW', 'tuh']);
 full_poem.lines[7].words[3] = new Word("pomplessly", '', '', "nonchalantly", [], [0], ['pomp', 'l.s', 'lE'], ['POMP', 'less', 'lee']);
 full_poem.lines[9].words[5] = new Word("concavities", '', '', "indentations", [], [1], ['kon', 'kav', 'i', 'tEz'], ['con', 'CAV', 'it', 'eez']);

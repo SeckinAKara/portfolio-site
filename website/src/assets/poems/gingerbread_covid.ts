@@ -1,4 +1,4 @@
-import { Full_Poem, Word } from "src/app/poem/poem_classes";
+import { Full_Poem, Line_Alignment, Word } from "src/app/poem/poem_classes";
 
 let full_poem_text = [
 "we are every day now swimming in honey",
@@ -29,6 +29,6 @@ let full_poem_text = [
 ]
 
 export const full_poem = new Full_Poem();
-full_poem.parsePoem("gingerbread house for covid", full_poem_text, "April 28, 2020");
+full_poem.parsePoem("gingerbread house for covid", full_poem_text, "April 28, 2020", Line_Alignment.CENTER);
 full_poem.lines[14].words[5] = new Word("ostinato", '', '', 'repeating musical line', [], [2], ['o', 'sti', 'no', 'tO'], ['ah', 'stin', 'AUTO']);
 full_poem.lines[11].words[0] = new Word("crystalline", '', '', 'made of crystals', [], [0], ['cri', 'st.', 'lin'], ['CRYSTAL', 'in']);
