@@ -10,14 +10,11 @@ p {
     /* Position the tooltip text - see examples below! */
     position: absolute;
     display: inline-block;
-    top: 100%;
+    bottom: -20pt;
+    right: 100%;
     cursor: inherit;
 }
 
 .italicized span {
     font-style: italic;
-}
-
-div {
-    width: 100%;
 }

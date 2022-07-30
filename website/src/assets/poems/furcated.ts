@@ -94,6 +94,5 @@ full_poem.lines[0].words[0] = new Word("bifurcate", '', ' ', 'split into 2', [],
 full_poem.lines[1].words[0] = new Word("vi", '', ' ', 'vivisect = dissect while alive', [], [0], ['vi', 'vi', 'sekt'], ["VIH", "vih", "sekt"]);
 full_poem.lines[10].words[0] = new Word("qué", '', '?', "Spanish for 'what'", [], [0], ['kA'], ["KAY"]);
 full_poem.lines[12].words[0] = new Word("trifurcate", '', ' ', 'split into 3', [], [0], ['trI', "f.R", "kAt"], ['TRY', 'fur', 'kate']);
-full_poem.lines[81].words[2] = new Word("meek", '', ' ', 'shy, timid', [], [0], ['mEk'], ['MEEK']);
+full_poem.lines[81].words[2] = new Word("meek", '', ' ', 'shy, timid');
 full_poem.lines[81].words[3] = new Word("intonations", '', ' ', 'vocal fluctuations during speech', [], [2], ['in', 'tO', 'nA', 'S.nz'], ['intone', 'NATions']);
-full_poem.lines[83].words[0] = new Word("kendİnİ", '', ' ', "kendini dinledin mi = Turkish for 'did you listen to yourself?'");

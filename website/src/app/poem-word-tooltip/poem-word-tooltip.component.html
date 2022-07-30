@@ -1,8 +1,11 @@
 <div *ngIf="(current_word.pronunciation.ipa.length > 0) || (current_word.primary_meaning.length > 0)">
-    <span [ngClass]="{'italicized': ((poemSettings.clicked === 0) && (current_word.pronunciation.ipa.length > 0))}">
-        <p>{{ current_word.primary_meaning }}
-        <span *ngIf="poemSettings.ascii_pronunciation">{{ current_word.pronunciation.ipa.join('_') }}</span>
-        <span *ngIf="!poemSettings.ascii_pronunciation">{{ current_word.pronunciation.spelled.join('_') }}</span>
+    <span>
+        <p>
+            <span>{{ current_word.primary_meaning }}</span>
+            <br>
+            <br>
+            <span style="font-style: italic" *ngIf="poemSettings.ascii_pronunciation">{{ current_word.pronunciation.ipa.join('_') }}</span>
+            <span style="font-style: italic" *ngIf="!poemSettings.ascii_pronunciation">{{ current_word.pronunciation.spelled.join('_') }}</span>
         </p>
     </span>
 </div>

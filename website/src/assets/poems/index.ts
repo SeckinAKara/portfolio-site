@@ -15,6 +15,8 @@ import { full_poem as caydanlik } from './caydanlik';
 import { full_poem as decomposition } from './decomposition';
 import { full_poem as fixed_width_asphalt } from './fixed_width_asphalt';
 import { full_poem as furcated } from './furcated';
+import { full_poem as musings_on_immaculate } from './musings_on_immaculate';
+
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
 let valid_poem_index: poem_map = {};
@@ -65,6 +67,9 @@ valid_poem_index['fixed_width_asphalt'] = fixed_width_asphalt;
 
 full_poem_index['furcated'] = furcated;
 valid_poem_index['furcated'] = furcated;
+
+full_poem_index['musings_on_immaculate'] = musings_on_immaculate;
+valid_poem_index['musings_on_immaculate'] = musings_on_immaculate;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);

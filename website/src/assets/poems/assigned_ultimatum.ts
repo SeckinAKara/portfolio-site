@@ -21,7 +21,7 @@ let full_poem_text = [
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("assigned ultimatum at birth", full_poem_text, "July 27, 2022", Line_Alignment.LEFT);
 full_poem.lines[2].words[1] = new Word("stigmata", '', '', "holes in hands from crucifixion", [], [1], ['stig', 'mW', 't.'], ['stig', 'MAW', 'tuh']);
-full_poem.lines[7].words[3] = new Word("pomplessly", '', '', "nonchalantly", [], [0], ['pomp', 'l.s', 'lE'], ['POMP', 'less', 'lee']);
+full_poem.lines[7].words[3] = new Word("pomplessly", '', '', "casually, carelessly", [], [0], ['pomp', 'l.s', 'lE'], ['POMP', 'less', 'lee']);
 full_poem.lines[9].words[5] = new Word("concavities", '', '', "indentations", [], [1], ['kon', 'kav', 'i', 'tEz'], ['con', 'CAV', 'it', 'eez']);
 full_poem.lines[11].words[2] = new Word("visage", '', ' ', "face", [], [0], ['viz', 'ij'], ['VIZZ', 'ij']);
 full_poem.lines[14].words[4] = new Word("Prey", '', '', "animal that gets eaten", [], [0], ['prA'], ['pray']);
