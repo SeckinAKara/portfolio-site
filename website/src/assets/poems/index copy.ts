@@ -12,8 +12,6 @@ import { full_poem as seventeen_apologies } from './seventeen_apologies';
 import { full_poem as assigned_ultimatum } from './assigned_ultimatum';
 import { full_poem as apology_father } from './apology_father';
 import { full_poem as caydanlik } from './caydanlik';
-import { full_poem as decomposition } from './decomposition';
-import { full_poem as fixed_width_asphalt } from './fixed_width_asphalt';
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
 let valid_poem_index: poem_map = {};
@@ -55,12 +53,6 @@ valid_poem_index['apology_father'] = apology_father;
 
 full_poem_index['caydanlik'] = caydanlik;
 valid_poem_index['caydanlik'] = caydanlik;
-
-full_poem_index['decomposition'] = decomposition;
-valid_poem_index['decomposition'] = decomposition;
-
-full_poem_index['fixed_width_asphalt'] = fixed_width_asphalt;
-valid_poem_index['fixed_width_asphalt'] = fixed_width_asphalt;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);
