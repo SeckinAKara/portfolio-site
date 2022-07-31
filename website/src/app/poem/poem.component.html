@@ -9,11 +9,12 @@
                                         [(poemSettings)]="poemSettings" 
                                         [current_word]="poem.lines[line].words[word]">
                     </poem-word-tooltip>
-                        {{ poem.lines[line].words[word].fullSpelling().replace(" ", " ") }}    
+                        {{ poem.lines[line].words[word].fullSpelling().replace(" ", " ") }}
                         <!--space is U+205F-->
                 </span>
             </span>
         </p>
+        <br><br><br>
     </div>
         <poem-toolbar class="poem-toolbar-section" [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
 </div>

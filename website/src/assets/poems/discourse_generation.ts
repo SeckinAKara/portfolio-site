@@ -25,4 +25,5 @@ let full_poem_text = [
 
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("discourse generation", full_poem_text, "June 2019");
+full_poem.lines[0].words[1] = new Word("adjacent", '', ' ', "next to", [], [1], ['.', 'jA', 's.nt'], ['uh', 'JAY', 'sint']);
 full_poem.lines[5].words[1] = new Word("f.gs", '', ' ', 'figs/fags');

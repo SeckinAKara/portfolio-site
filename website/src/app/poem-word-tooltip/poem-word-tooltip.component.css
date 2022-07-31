@@ -13,6 +13,7 @@ p {
     bottom: -20pt;
     right: 100%;
     cursor: inherit;
+    z-index: 2;
 }
 
 .italicized span {

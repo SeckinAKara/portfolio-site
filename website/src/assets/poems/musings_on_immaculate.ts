@@ -47,4 +47,6 @@ let full_poem_text = [
 
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("musings on immaculate", full_poem_text, "March 2018", Line_Alignment.CENTER);
-full_poem.lines[17].words[7] = new Word("syringe", '', '', 'medical needle', [], [1], ['s.', 'rinj'], ["suh", "RINJ"]);
+full_poem.lines[17].words[9] = new Word("arcane", '', '', 'mysterious, ancient', [], [1], ['aR', 'kAn'], ["ar", "CANE"]);
+full_poem.lines[18].words[0] = new Word("transcribing", '', '', 'writing down', [], [1], ['tran', 'skrI', 'biN'], ['trans', 'SCRIBE', 'ing']);
+full_poem.lines[19].words[4] = new Word("chronology", '', '', 'timeline', [], [1], ['krO', 'nol', 'o', 'jE'], ['crone', 'OLogy']);

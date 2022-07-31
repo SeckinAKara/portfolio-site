@@ -10,11 +10,11 @@ export const pronunciation_key_spelled:string[] = [
 "O -> boat = bOt ~~~~~ AR -> care = kAR",
 "U -> boot = bUt ~~~~~ ER -> hear = hER",
 "u -> book = buk ~~~~~ OR -> snore = snOR",
-"y -> use = yUz ~~~~~~ .R -> bird = b.Rd",
-"W -> caught = kWt ~~~ Z -> azure = aZ.R",
-"aw -> doubt = dawt ~~ j -> jump = jVmp",   
-"oy -> boy = boy ~~~~~ . -> about = .bawt",
-"- -> uh-oh = V-O ~~~~"
+"y -> use = yUz ~~~~~~ UR -> tour = tUR",
+"W -> caught = kWt ~~~ .R -> bird = b.Rd",
+"aw -> doubt = dawt ~~ Z -> azure = aZ.R",
+"oy -> boy = boy ~~~~~ j -> jump = jVmp",   
+"- -> uh-oh = V-O ~~~~ . -> about = .bawt"
 ];
 
 export const pronunciation_key_ipa:string[] = [
@@ -29,9 +29,9 @@ export const pronunciation_key_ipa:string[] = [
     "O = /oʊ/ ~~~~~ AR = /ɛr/",
     "U = /u/ ~~~~~~ ER = /ir/",
     "u = /ʊ/ ~~~~~~ OR = /or/",
-    "y = /j/ ~~~~~~ .R = /ɚ/",
-    "W = /ɑ/ ~~~~~~ Z = /ʒ/",
-    "aw = /aʊ/ ~~~~ j = /dʒ/",
-    "oy = /ɔɪ/ ~~~~ . = /ə/",
-    "- = /ʔ/ ~~~~~~"
+    "y = /j/ ~~~~~~ UR = /ur/",
+    "W = /ɑ/ ~~~~~~ .R = /ɚ/",
+    "aw = /aʊ/ ~~~~ Z = /ʒ/",
+    "oy = /ɔɪ/ ~~~~ j = /dʒ/",
+    "- = /ʔ/ ~~~~~~ . = /ə/"
     ];

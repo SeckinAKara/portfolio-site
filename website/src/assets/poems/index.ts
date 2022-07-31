@@ -16,6 +16,9 @@ import { full_poem as decomposition } from './decomposition';
 import { full_poem as fixed_width_asphalt } from './fixed_width_asphalt';
 import { full_poem as furcated } from './furcated';
 import { full_poem as musings_on_immaculate } from './musings_on_immaculate';
+import { full_poem as entombed } from './entombed';
+import { full_poem as to_the_phase_kids } from './to_the_phase_kids';
+import { full_poem as offgrid } from './offgrid';
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -70,6 +73,15 @@ valid_poem_index['furcated'] = furcated;
 
 full_poem_index['musings_on_immaculate'] = musings_on_immaculate;
 valid_poem_index['musings_on_immaculate'] = musings_on_immaculate;
+
+full_poem_index['entombed'] = entombed;
+valid_poem_index['entombed'] = entombed;
+
+full_poem_index['to_the_phase_kids'] = to_the_phase_kids;
+valid_poem_index['to_the_phase_kids'] = to_the_phase_kids;
+
+full_poem_index['offgrid'] = offgrid;
+valid_poem_index['offgrid'] = offgrid;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);
