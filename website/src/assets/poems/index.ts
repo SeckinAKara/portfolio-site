@@ -21,7 +21,7 @@ import { full_poem as to_the_phase_kids } from './to_the_phase_kids';
 import { full_poem as offgrid } from './offgrid';
 import { full_poem as my_name_grocery_bag } from './my_name_grocery_bag';
 import { full_poem as my_hair_flies } from './my_hair_flies';
-import { full_poem as zzzzzzzzzzzzzzzzzzzz } from './ZZZZZZZZZZZZZZZZZZZZ';
+import { full_poem as zzzzzzzzzzzzzzzzzzzz } from './zzzzzzzzzzzzzzzzzzzz';
 import { full_poem as fuck_your_suburbs } from './fuck_your_suburbs';
 import { full_poem as gestalt_gaze } from './gestalt_gaze';
 import { full_poem as growing_my_hair } from './growing_my_hair';
