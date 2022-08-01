@@ -4,5 +4,5 @@ h1 {
 
 div {
     position: fixed;
-    z-index: 0;
+    z-index: 1;
 }

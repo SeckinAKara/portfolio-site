@@ -4,8 +4,7 @@
             <span [ngStyle]="{'cursor': 'default'}">
                 <span *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])"
                         [ngClass]="poem.lines[line].words[word].primary_meaning.length > 0 ? 'poem-word-underlined' : 'poem-word' ">
-                    <poem-word-tooltip class="tooltiptext"
-                                        *ngIf="currentHover([line, word])" 
+                    <poem-word-tooltip *ngIf="currentHover([line, word])" 
                                         [(poemSettings)]="poemSettings" 
                                         [current_word]="poem.lines[line].words[word]">
                     </poem-word-tooltip>
@@ -16,5 +15,5 @@
         </p>
         <br><br><br>
     </div>
-        <poem-toolbar class="poem-toolbar-section" [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
+        <poem-toolbar [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
 </div>

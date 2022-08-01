@@ -19,69 +19,42 @@ import { full_poem as musings_on_immaculate } from './musings_on_immaculate';
 import { full_poem as entombed } from './entombed';
 import { full_poem as to_the_phase_kids } from './to_the_phase_kids';
 import { full_poem as offgrid } from './offgrid';
+import { full_poem as my_name_grocery_bag } from './my_name_grocery_bag';
+import { full_poem as my_hair_flies } from './my_hair_flies';
+import { full_poem as zzzzzzzzzzzzzzzzzzzz } from './ZZZZZZZZZZZZZZZZZZZZ';
+import { full_poem as fuck_your_suburbs } from './fuck_your_suburbs';
+import { full_poem as gestalt_gaze } from './gestalt_gaze';
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
 let valid_poem_index: poem_map = {};
-full_poem_index['coming_out_depressive'] = coming_out_depressive;
-valid_poem_index['coming_out_depressive'] = coming_out_depressive;
 
-full_poem_index['parents_house_mine'] = parents_house_mine;
-valid_poem_index['parents_house_mine'] = parents_house_mine;
+full_poem_index['coming_out_depressive'] = valid_poem_index['coming_out_depressive'] = coming_out_depressive;
+full_poem_index['parents_house_mine'] = valid_poem_index['parents_house_mine'] = parents_house_mine;
+full_poem_index['pupas'] = valid_poem_index['pupas'] = pupas;
+full_poem_index['airplane_tray_table'] = valid_poem_index['airplane_tray_table'] = airplane_tray_table;
+full_poem_index['dust_bunny'] = valid_poem_index['dust_bunny'] = dust_bunny;
+full_poem_index['happy_coming_out'] = valid_poem_index['happy_coming_out'] = happy_coming_out;
+full_poem_index['discourse_generation'] = valid_poem_index['discourse_generation'] = discourse_generation;
+full_poem_index['forget_me'] = valid_poem_index['forget_me'] = forget_me;
+full_poem_index['gingerbread_covid'] = valid_poem_index['gingerbread_covid'] = gingerbread_covid;
+full_poem_index['seventeen_apologies'] = valid_poem_index['seventeen_apologies'] = seventeen_apologies;
+full_poem_index['assigned_ultimatum'] = valid_poem_index['assigned_ultimatum'] = assigned_ultimatum;
+full_poem_index['apology_father'] = valid_poem_index['apology_father'] = apology_father;
+full_poem_index['caydanlik'] = valid_poem_index['caydanlik'] = caydanlik;
+full_poem_index['decomposition'] = valid_poem_index['decomposition'] = decomposition;
+full_poem_index['fixed_width_asphalt'] = valid_poem_index['fixed_width_asphalt'] = fixed_width_asphalt;
+full_poem_index['furcated'] = valid_poem_index['furcated'] = furcated;
+full_poem_index['musings_on_immaculate'] = valid_poem_index['musings_on_immaculate'] = musings_on_immaculate;
+full_poem_index['entombed'] = valid_poem_index['entombed'] = entombed;
+full_poem_index['to_the_phase_kids'] = valid_poem_index['to_the_phase_kids'] = to_the_phase_kids;
+full_poem_index['offgrid'] = valid_poem_index['offgrid'] = offgrid;
+full_poem_index['my_name_grocery_bag'] = valid_poem_index['my_name_grocery_bag'] = my_name_grocery_bag;
+full_poem_index['my_hair_flies'] = valid_poem_index['my_hair_flies'] = my_hair_flies;
+full_poem_index['zzzzzzzzzzzzzzzzzzzz'] = valid_poem_index['zzzzzzzzzzzzzzzzzzzz'] = zzzzzzzzzzzzzzzzzzzz;
+full_poem_index['fuck_your_suburbs'] = valid_poem_index['fuck_your_suburbs'] = fuck_your_suburbs;
+full_poem_index['gestalt_gaze'] = valid_poem_index['gestalt_gaze'] = gestalt_gaze;
 
-full_poem_index['pupas'] = pupas;
-valid_poem_index['pupas'] = pupas;
-
-full_poem_index['airplane_tray_table'] = airplane_tray_table;
-valid_poem_index['airplane_tray_table'] = airplane_tray_table;
-
-full_poem_index['dust_bunny'] = dust_bunny;
-valid_poem_index['dust_bunny'] = dust_bunny;
-
-full_poem_index['happy_coming_out'] = happy_coming_out;
-valid_poem_index['happy_coming_out'] = happy_coming_out;
-
-full_poem_index['discourse_generation'] = discourse_generation;
-valid_poem_index['discourse_generation'] = discourse_generation;
-
-full_poem_index['forget_me'] = forget_me;
-valid_poem_index['forget_me'] = forget_me;
-
-full_poem_index['gingerbread_covid'] = gingerbread_covid;
-valid_poem_index['gingerbread_covid'] = gingerbread_covid;
-
-full_poem_index['seventeen_apologies'] = seventeen_apologies;
-valid_poem_index['seventeen_apologies'] = seventeen_apologies;
-
-full_poem_index['assigned_ultimatum'] = assigned_ultimatum;
-valid_poem_index['assigned_ultimatum'] = assigned_ultimatum;
-
-full_poem_index['apology_father'] = apology_father;
-valid_poem_index['apology_father'] = apology_father;
-
-full_poem_index['caydanlik'] = caydanlik;
-valid_poem_index['caydanlik'] = caydanlik;
-
-full_poem_index['decomposition'] = decomposition;
-valid_poem_index['decomposition'] = decomposition;
-
-full_poem_index['fixed_width_asphalt'] = fixed_width_asphalt;
-valid_poem_index['fixed_width_asphalt'] = fixed_width_asphalt;
-
-full_poem_index['furcated'] = furcated;
-valid_poem_index['furcated'] = furcated;
-
-full_poem_index['musings_on_immaculate'] = musings_on_immaculate;
-valid_poem_index['musings_on_immaculate'] = musings_on_immaculate;
-
-full_poem_index['entombed'] = entombed;
-valid_poem_index['entombed'] = entombed;
-
-full_poem_index['to_the_phase_kids'] = to_the_phase_kids;
-valid_poem_index['to_the_phase_kids'] = to_the_phase_kids;
-
-full_poem_index['offgrid'] = offgrid;
-valid_poem_index['offgrid'] = offgrid;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);

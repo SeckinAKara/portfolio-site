@@ -42,9 +42,9 @@ poem-toolbar {
     border-width: 0 0 2px 0;
 }
 
-poem-tooltip {
+poem-word-tooltip {
     position: relative;
-    left: 100%;
     bottom: 20pt;
+    left: 100%;
     z-index: 2;
 }
