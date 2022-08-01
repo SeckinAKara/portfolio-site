@@ -24,6 +24,7 @@ import { full_poem as my_hair_flies } from './my_hair_flies';
 import { full_poem as zzzzzzzzzzzzzzzzzzzz } from './ZZZZZZZZZZZZZZZZZZZZ';
 import { full_poem as fuck_your_suburbs } from './fuck_your_suburbs';
 import { full_poem as gestalt_gaze } from './gestalt_gaze';
+import { full_poem as growing_my_hair } from './growing_my_hair';
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -54,6 +55,7 @@ full_poem_index['my_hair_flies'] = valid_poem_index['my_hair_flies'] = my_hair_f
 full_poem_index['zzzzzzzzzzzzzzzzzzzz'] = valid_poem_index['zzzzzzzzzzzzzzzzzzzz'] = zzzzzzzzzzzzzzzzzzzz;
 full_poem_index['fuck_your_suburbs'] = valid_poem_index['fuck_your_suburbs'] = fuck_your_suburbs;
 full_poem_index['gestalt_gaze'] = valid_poem_index['gestalt_gaze'] = gestalt_gaze;
+full_poem_index['growing_my_hair'] = valid_poem_index['growing_my_hair'] = growing_my_hair;
 
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);

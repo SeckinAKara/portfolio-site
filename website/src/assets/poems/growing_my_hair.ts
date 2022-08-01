@@ -1,0 +1,51 @@
+import { Full_Poem, Line, Line_Alignment, Word } from "src/app/poem/poem_classes";
+
+let full_poem_text = [
+"woke up on the",
+"wrong side of the shower drain",
+"donned a kickme sign",
+"and weighed the pros and cons",
+"of each facial feature",
+"envisions a road where my each",
+"frowning organ",
+"poses for a cover shot",
+"on a pile of empty Aquafina bottles",
+"",
+"at each misidentification, wonder",
+"the side of the coin you're on today",
+"the hypervigilance to his double-take",
+"as i enter the men's room",
+"the drop in the bucket",
+"the population of los angeles ",
+"the sense of loss",
+"",
+"my eyes shoot lasers",
+"that get me kicked out of restaurants",
+"my eyes shoot lasers",
+"that get me kicked",
+"",
+"with enough swirls to fill the ennui",
+"see how the sulfur encroaches",
+"on my periphery",
+"see how the blinders",
+"see how the inertia",
+"see how the ",
+"inertia",
+"if he can't see my eyes i'm safe.",
+"",
+"what hurts more, the knife or the gaze",
+"which will quicker turn me into",
+"a list of accomplishments",
+"",
+"soon, to a crowd",
+"of some collection of adjectives",
+"beneath a $20 Pride flag",
+"i will be wrought unwrought",
+"dispersed to the mob",
+"and there will be naught left",
+"but a wig"
+]
+
+export const full_poem = new Full_Poem();
+full_poem.parsePoem("growing my hair out", full_poem_text, "June 2022", Line_Alignment.LEFT);
+full_poem.lines[23].words[6] = new Word("ennui", '', '', "existential boredom", [], [1], ['Wn', 'wE'], ['awn', 'WEE']);
