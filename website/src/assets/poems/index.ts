@@ -25,6 +25,10 @@ import { full_poem as zzzzzzzzzzzzzzzzzzzz } from './zzzzzzzzzzzzzzzzzzzz';
 import { full_poem as fuck_your_suburbs } from './fuck_your_suburbs';
 import { full_poem as gestalt_gaze } from './gestalt_gaze';
 import { full_poem as growing_my_hair } from './growing_my_hair';
+import { full_poem as espejo } from './espejo';
+import { full_poem as how_to_dissociate } from './how_to_dissociate';
+import { full_poem as love_in_climate_change } from './love_in_climate_change';
+import { full_poem as metamorphic } from './metamorphic';
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -56,7 +60,10 @@ full_poem_index['zzzzzzzzzzzzzzzzzzzz'] = valid_poem_index['zzzzzzzzzzzzzzzzzzzz
 full_poem_index['fuck_your_suburbs'] = valid_poem_index['fuck_your_suburbs'] = fuck_your_suburbs;
 full_poem_index['gestalt_gaze'] = valid_poem_index['gestalt_gaze'] = gestalt_gaze;
 full_poem_index['growing_my_hair'] = valid_poem_index['growing_my_hair'] = growing_my_hair;
-
+full_poem_index['espejo'] = valid_poem_index['espejo'] = espejo;
+full_poem_index['how_to_dissociate'] = valid_poem_index['how_to_dissociate'] = how_to_dissociate;
+full_poem_index['love_in_climate_change'] = valid_poem_index['love_in_climate_change'] = love_in_climate_change;
+full_poem_index['metamorphic'] = valid_poem_index['metamorphic'] = metamorphic;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);
