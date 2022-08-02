@@ -32,6 +32,7 @@ import { full_poem as metamorphic } from './metamorphic';
 import { full_poem as stratus_quo } from './stratus_quo';
 import { full_poem as most_poisonous_thing } from './most_poisonous_thing';
 import { full_poem as threnody_bombed } from './threnody_bombed';
+import { full_poem as nonstandard } from './nonstandard';
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -70,6 +71,7 @@ full_poem_index['metamorphic'] = valid_poem_index['metamorphic'] = metamorphic;
 full_poem_index['stratus_quo'] = valid_poem_index['stratus_quo'] = stratus_quo;
 full_poem_index['most_poisonous_thing'] = valid_poem_index['most_poisonous_thing'] = most_poisonous_thing;
 full_poem_index['threnody_bombed'] = valid_poem_index['threnody_bombed'] = threnody_bombed;
+full_poem_index['nonstandard'] = valid_poem_index['nonstandard'] = nonstandard;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);

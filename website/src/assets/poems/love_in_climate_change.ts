@@ -50,6 +50,7 @@ let full_poem_text = [
 
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("love in the times of climate change", full_poem_text, "November 2018", Line_Alignment.LEFT);
+full_poem.lines[5].words[5].italicized = true;
 full_poem.lines[19].words[1] = new Word("arrhythmia", '', ' ', 'irregular heartbeat', [], [1], ['.', 'riD', 'mE', '.'], ['uh', 'RITH', 'mia']);
 full_poem.lines[35].words[1] = new Word("indelible", '', ' ', 'impossible to delete', [], [1], ['in', 'del', 'i', 'b.l'], ['in', 'DELL', 'ible']);
 full_poem.lines[44].words[3] = new Word("molly", '', ' ', 'MDMA/ecstasy');
