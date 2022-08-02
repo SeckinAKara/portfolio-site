@@ -29,6 +29,9 @@ import { full_poem as espejo } from './espejo';
 import { full_poem as how_to_dissociate } from './how_to_dissociate';
 import { full_poem as love_in_climate_change } from './love_in_climate_change';
 import { full_poem as metamorphic } from './metamorphic';
+import { full_poem as stratus_quo } from './stratus_quo';
+import { full_poem as most_poisonous_thing } from './most_poisonous_thing';
+import { full_poem as threnody_bombed } from './threnody_bombed';
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -64,6 +67,9 @@ full_poem_index['espejo'] = valid_poem_index['espejo'] = espejo;
 full_poem_index['how_to_dissociate'] = valid_poem_index['how_to_dissociate'] = how_to_dissociate;
 full_poem_index['love_in_climate_change'] = valid_poem_index['love_in_climate_change'] = love_in_climate_change;
 full_poem_index['metamorphic'] = valid_poem_index['metamorphic'] = metamorphic;
+full_poem_index['stratus_quo'] = valid_poem_index['stratus_quo'] = stratus_quo;
+full_poem_index['most_poisonous_thing'] = valid_poem_index['most_poisonous_thing'] = most_poisonous_thing;
+full_poem_index['threnody_bombed'] = valid_poem_index['threnody_bombed'] = threnody_bombed;
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);
