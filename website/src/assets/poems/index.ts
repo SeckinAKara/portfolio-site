@@ -33,6 +33,8 @@ import { full_poem as stratus_quo } from './stratus_quo';
 import { full_poem as most_poisonous_thing } from './most_poisonous_thing';
 import { full_poem as threnody_bombed } from './threnody_bombed';
 import { full_poem as nonstandard } from './nonstandard';
+import { full_poem as on_hilltop_moon } from './on_hilltop_moon';
+import { full_poem as ode_to_nail_polish } from './ode_to_nail_polish';
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -72,6 +74,9 @@ full_poem_index['stratus_quo'] = valid_poem_index['stratus_quo'] = stratus_quo;
 full_poem_index['most_poisonous_thing'] = valid_poem_index['most_poisonous_thing'] = most_poisonous_thing;
 full_poem_index['threnody_bombed'] = valid_poem_index['threnody_bombed'] = threnody_bombed;
 full_poem_index['nonstandard'] = valid_poem_index['nonstandard'] = nonstandard;
+full_poem_index['on_hilltop_moon'] = valid_poem_index['on_hilltop_moon'] = on_hilltop_moon;
+full_poem_index['ode_to_nail_polish'] = valid_poem_index['ode_to_nail_polish'] = ode_to_nail_polish;
+
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
 export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);
