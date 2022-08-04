@@ -1,7 +1,7 @@
 ul {
     width: 17%;
-    height: 70%;
-    margin-top: 7%;
+    height: 75%;
+    padding-bottom: 20pt;
     cursor: pointer;    
     position: fixed;
     z-index: 1;
