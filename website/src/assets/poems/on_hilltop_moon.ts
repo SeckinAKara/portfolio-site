@@ -23,4 +23,4 @@ let full_poem_text = [
 ]
 
 export const full_poem = new Full_Poem();
-full_poem.parsePoem("on a hilltop sat the moon, after amon tobin", full_poem_text, "February, 2019", Line_Alignment.CENTER);
+full_poem.parsePoem("on a hilltop sat the moon, after amon tobin", full_poem_text, "February 2019", Line_Alignment.CENTER);

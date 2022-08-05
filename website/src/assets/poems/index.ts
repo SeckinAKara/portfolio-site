@@ -35,6 +35,9 @@ import { full_poem as threnody_bombed } from './threnody_bombed';
 import { full_poem as nonstandard } from './nonstandard';
 import { full_poem as on_hilltop_moon } from './on_hilltop_moon';
 import { full_poem as ode_to_nail_polish } from './ode_to_nail_polish';
+import { full_poem as time_the_alchemist } from './time_the_alchemist'
+import { full_poem as vertigo } from './vertigo'
+import { full_poem as written_during_panic } from './written_during_panic'
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -76,6 +79,9 @@ full_poem_index['threnody_bombed'] = valid_poem_index['threnody_bombed'] = thren
 full_poem_index['nonstandard'] = valid_poem_index['nonstandard'] = nonstandard;
 full_poem_index['on_hilltop_moon'] = valid_poem_index['on_hilltop_moon'] = on_hilltop_moon;
 full_poem_index['ode_to_nail_polish'] = valid_poem_index['ode_to_nail_polish'] = ode_to_nail_polish;
+full_poem_index['time_the_alchemist'] = valid_poem_index['time_the_alchemist'] = time_the_alchemist;
+full_poem_index['vertigo'] = valid_poem_index['vertigo'] = vertigo;
+full_poem_index['written_during_panic'] = valid_poem_index['written_during_panic'] = written_during_panic;
 
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
