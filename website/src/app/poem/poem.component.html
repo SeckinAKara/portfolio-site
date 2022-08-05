@@ -1,4 +1,5 @@
 <div class="overall">
+    <poem-list [(poemTitle)]="poemTitle"></poem-list>
     <div class="poem-section" (click)="poemSettings.clicked=1-poemSettings.clicked" (mouseout)="hoverWord([])">
         <p *ngFor="let line of poem.number_of_lines" [ngStyle]="{'text-align': poem.lines[line].align}">
             <span [ngStyle]="{'cursor': 'default'}">
@@ -16,5 +17,5 @@
         </p>
         <br><br><br>
     </div>
-        <poem-toolbar [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
+    <poem-toolbar [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
 </div>

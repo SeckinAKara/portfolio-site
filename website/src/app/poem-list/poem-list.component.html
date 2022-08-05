@@ -2,5 +2,4 @@
     <ul>
         <li *ngFor="let title of valid_poem_index.poem_map | keyvalue" [routerLink]="['/poems/', title.key]" (click)="updatePoem(title.key)">{{ title.value.title }}</li>
     </ul>
-    <poem [poemTitle]="poemTitle"></poem>
 </div>

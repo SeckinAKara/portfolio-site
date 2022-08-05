@@ -13,6 +13,7 @@ import { PoemWordTooltipComponent } from './poem-word-tooltip/poem-word-tooltip.
 import { PoemToolbarComponent } from './poem-toolbar/poem-toolbar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     PoemListComponent,
     PoemWordTooltipComponent,
     PoemToolbarComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

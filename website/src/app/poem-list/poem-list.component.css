@@ -1,26 +1,10 @@
 ul {
-    width: 17%;
-    height: 75%;
-    padding-bottom: 20pt;
     cursor: pointer;    
-    position: fixed;
     z-index: 1;
-    border-right: 1pt black solid;
     overflow: auto;
 }
 
 li {
     font-size: 14;
     z-index: 1;
-}
-
-div {
-    width: 100%;
-    display: inline-flex;
-    z-index: 1;
-}
-
-poem {
-    width: 100%;
-    height: 100%;
 }

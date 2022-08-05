@@ -1,6 +1,9 @@
 import { Component, Input, OnInit, Output, EventEmitter, DoCheck, OnChanges, SimpleChanges } from '@angular/core';
 import { FileGrabberService } from '../file-grabber.service';
-import { Full_Poem, PoemSettings, Word } from './poem_classes';
+import { Full_Poem, PoemSettings, Word, PoemMap } from './poem_classes';
+import { Router } from '@angular/router';
+import { full_poem_map, valid_poem_map } from 'src/assets/poems';
+
 
 @Component({
   selector: 'poem-template-nonusable',
@@ -23,13 +26,26 @@ export class PoemComponentTemplate {
   templateUrl: './poem.component.html',
   styleUrls: ['./poem.component.css']
 })
-export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCheck  {
+export class PoemComponent extends PoemComponentTemplate implements OnInit, OnChanges, DoCheck  {
 
-  constructor(private http: FileGrabberService) { 
+  poem_index: PoemMap = full_poem_map;
+  valid_poem_index: PoemMap = valid_poem_map;
+
+
+  constructor(private http: FileGrabberService, private router: Router) { 
     super();
   }
 
-  ngOnInit(): void {
+  ngOnInit() {     
+    let preliminary_url = this.router.url.split('/');
+    let preliminary_title = preliminary_url[preliminary_url.length - 1];
+    if (full_poem_map.hasTitle(preliminary_title)) {
+      this.poemTitle = preliminary_title;
+    }
+    this.getPoem();    
+  }
+
+  ngOnChanges(): void {
     this.getPoem();
   }
 

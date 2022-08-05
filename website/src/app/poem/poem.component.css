@@ -8,31 +8,22 @@ p {
 .overall {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 90%;
     z-index: -1;
+    margin-top: 20pt;
 }
 
 .poem-section {
-    padding: 5% 20% 0% 23%;
-    overflow: auto;
+    padding: 20pt 20% 0% 20%;
     position: relative;
-    display: inline-block;
     width: 100%;
-}
-
-poem-toolbar {
-    width: 20%;
-    height: 80%;
-    position: fixed;
-    right: 0;
-    border-left: 1pt black solid;
-    overflow: auto;
+    height: 100%;
 }
 
 .poem-word {
     position: relative;
     display: inline-block;
-  }
+}
 
 .poem-word-underlined {
     position: relative;
@@ -42,9 +33,31 @@ poem-toolbar {
     border-width: 0 0 2px 0;
 }
 
+poem-toolbar {
+    margin-top: 20pt;
+    width: 20%;
+    height: 80%;
+    position: fixed;
+    right: 0;
+    border-left: 1pt black solid;
+    overflow: auto;
+    z-index: 1;
+}
+
 poem-word-tooltip {
     position: relative;
     bottom: 20pt;
     left: 100%;
     z-index: 2;
+}
+
+poem-list {
+    margin-top: 20pt;
+    width: 20%;
+    height: 80%;
+    position: fixed;
+    left: 0;
+    border-right: 1pt black solid;
+    overflow: auto;
+    z-index: 1;
 }

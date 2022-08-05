@@ -33,6 +33,7 @@ let full_poem_text = [
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("ode to nail polish", full_poem_text, "March 30, 2018", Line_Alignment.CENTER);
 full_poem.lines[1].words[1] = new Word("bioluminescent", '', ' ', 'animals that glow in the dark', [], [4], ['bI', 'O', 'lUm', 'i', 'nes', '.nt'], ['bio', 'loomin', 'ESS', 'ent']);
+full_poem.lines[1].words[2] = new Word("semaphore", '', ' ', 'using flags on ships to communicate', [], [0], ['sem', '.', 'fOR'], ['SEMma', 'fore']);
 full_poem.lines[4].words[2] = new Word("lunulae", '', ' ', 'white part at base of fingernails', [], [0], ['lUn', 'y.', 'lA'], ['LOON', 'you', 'lay']);
 full_poem.lines[10].words[2] = new Word("capricious", '', ' ', 'prone to mood swings', [], [1], ['k.', 'prE', 'S.s'], ['cuh', 'PREESH', 'ous']);
 full_poem.lines[11].words[1] = new Word("bile", '', ' ', 'green-ish liquid from gallbladder');
