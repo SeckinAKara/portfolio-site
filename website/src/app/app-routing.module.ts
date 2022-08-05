@@ -13,7 +13,7 @@ const routes: Routes = [
     redirectTo: 'poems/index'
   },
   {
-    path: '**',
+    path: '*/*',
     component: PageNotFoundComponent
   }
 ];
