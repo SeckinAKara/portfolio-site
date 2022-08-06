@@ -1,7 +1,7 @@
 export const pronunciation_key_spelled:string[] = [
 "a -> cat = kat ~~~ N -> sing = siN",
-"i -> bit = bit ~~~ am -> cam",
-"e -> bed = bed ~~~ an -> can",
+"i -> bit = bit ~~~ am -> cam = kam",
+"e -> bed = bed ~~~ an -> can = kan",
 "V -> but = bVt ~~~ T -> think = TiNk",
 "o -> bot = bot ~~~ D -> the = D.",
 "A -> cake = kAk ~~ S -> shut = SVt",

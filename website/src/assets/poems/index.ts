@@ -43,6 +43,7 @@ import { full_poem as path_of_his_herd } from './path_of_his_herd'
 import { full_poem as pillow_cover } from './pillow_cover'
 import { full_poem as pincushion } from './pincushion'
 import { full_poem as psychoanalyzing_selfies } from './psychoanalyzing_selfies'
+import { full_poem as menage_a_froid } from './menage_a_froid'
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
 let valid_poem_index: poem_map = {};
@@ -91,6 +92,7 @@ full_poem_index['path_of_his_herd'] = valid_poem_index['path_of_his_herd'] = pat
 full_poem_index['pillow_cover'] = valid_poem_index['pillow_cover'] = pillow_cover;
 full_poem_index['pincushion'] = valid_poem_index['pincushion'] = pincushion;
 full_poem_index['psychoanalyzing_selfies'] = valid_poem_index['psychoanalyzing_selfies'] = psychoanalyzing_selfies;
+full_poem_index['menage_a_froid'] = valid_poem_index['menage_a_froid'] = menage_a_froid;
 
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
