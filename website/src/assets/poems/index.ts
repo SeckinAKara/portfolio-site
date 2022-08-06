@@ -38,7 +38,11 @@ import { full_poem as ode_to_nail_polish } from './ode_to_nail_polish';
 import { full_poem as time_the_alchemist } from './time_the_alchemist'
 import { full_poem as vertigo } from './vertigo'
 import { full_poem as written_during_panic } from './written_during_panic'
-
+import { full_poem as squeeze } from './squeeze'
+import { full_poem as path_of_his_herd } from './path_of_his_herd'
+import { full_poem as pillow_cover } from './pillow_cover'
+import { full_poem as pincushion } from './pincushion'
+import { full_poem as psychoanalyzing_selfies } from './psychoanalyzing_selfies'
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
 let valid_poem_index: poem_map = {};
@@ -82,6 +86,11 @@ full_poem_index['ode_to_nail_polish'] = valid_poem_index['ode_to_nail_polish'] =
 full_poem_index['time_the_alchemist'] = valid_poem_index['time_the_alchemist'] = time_the_alchemist;
 full_poem_index['vertigo'] = valid_poem_index['vertigo'] = vertigo;
 full_poem_index['written_during_panic'] = valid_poem_index['written_during_panic'] = written_during_panic;
+full_poem_index['squeeze'] = valid_poem_index['squeeze'] = squeeze;
+full_poem_index['path_of_his_herd'] = valid_poem_index['path_of_his_herd'] = path_of_his_herd;
+full_poem_index['pillow_cover'] = valid_poem_index['pillow_cover'] = pillow_cover;
+full_poem_index['pincushion'] = valid_poem_index['pincushion'] = pincushion;
+full_poem_index['psychoanalyzing_selfies'] = valid_poem_index['psychoanalyzing_selfies'] = psychoanalyzing_selfies;
 
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
