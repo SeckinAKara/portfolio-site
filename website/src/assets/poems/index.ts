@@ -44,6 +44,9 @@ import { full_poem as pillow_cover } from './pillow_cover'
 import { full_poem as pincushion } from './pincushion'
 import { full_poem as psychoanalyzing_selfies } from './psychoanalyzing_selfies'
 import { full_poem as menage_a_froid } from './menage_a_froid'
+import { full_poem as autochthon } from './autochthon'
+import { full_poem as bacchanal_gymnopedia } from './bacchanal_gymnopedia'
+
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
 let valid_poem_index: poem_map = {};
@@ -93,6 +96,8 @@ full_poem_index['pillow_cover'] = valid_poem_index['pillow_cover'] = pillow_cove
 full_poem_index['pincushion'] = valid_poem_index['pincushion'] = pincushion;
 full_poem_index['psychoanalyzing_selfies'] = valid_poem_index['psychoanalyzing_selfies'] = psychoanalyzing_selfies;
 full_poem_index['menage_a_froid'] = valid_poem_index['menage_a_froid'] = menage_a_froid;
+full_poem_index['autochthon'] = valid_poem_index['autochthon'] = autochthon;
+full_poem_index['bacchanal_gymnopedia'] = valid_poem_index['bacchanal_gymnopedia'] = bacchanal_gymnopedia;
 
 
 export const full_poem_map:PoemMap = new PoemMap(full_poem_index);

@@ -21,4 +21,4 @@ let full_poem_text = [
 ]
 
 export const full_poem = new Full_Poem();
-full_poem.parsePoem("espejo", full_poem_text, "March 5, 2018", Line_Alignment.LEFT);
+full_poem.parsePoem("espejo", full_poem_text, "March 5, 2018", Line_Alignment.CENTER);
