@@ -31,3 +31,21 @@ let full_poem_text = [
 export const full_poem = new Full_Poem()
 full_poem.parsePoem("my name on a loose grocery bag", full_poem_text, "November 2021");
 full_poem.lines[15].words[1] = new Word("kin", '', ' ', 'related by family');
+
+let group_1 = [[0, 2], [0, 7], [1, 3], [6, 2]];
+let group_2 = [[3, 2], [3, 3], [3, 5], [4, 0]];
+let group_3 = [[7, 3], [7, 6], [8, 9]];
+let group_4  = [[12, 6], [12, 8], [15, 1], [15, 2], [15, 8], [16, 1], [16, 2], [16, 6], [17, 0]];
+
+for (var word of group_1) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 1;
+}
+for (var word of group_2) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 2;
+}
+for (var word of group_3) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 3;
+}
+for (var word of group_4) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 4;
+}

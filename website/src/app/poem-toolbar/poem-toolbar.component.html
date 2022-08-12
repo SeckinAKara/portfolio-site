@@ -10,7 +10,7 @@
 <br>
 <p>
     Assonance Colors 
-    <mat-slide-toggle color="accent" (change)="updateSettings('rhyme_colors')"></mat-slide-toggle>
+    <mat-slide-toggle color="accent" [checked]="poemSettings.rhyme_colors" (change)="updateSettings('rhyme_colors')"></mat-slide-toggle>
 </p>
 <div>
     <p class="info-box">Poem Title: {{ poem.title }}</p>

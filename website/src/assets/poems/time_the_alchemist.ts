@@ -39,7 +39,7 @@ let full_poem_text = [
 ]
 
 export const full_poem = new Full_Poem();
-full_poem.parsePoem("time, the alchemist", full_poem_text, "Summer/Fall 2019", Line_Alignment.LEFT);
+full_poem.parsePoem("time, the alchemist", full_poem_text, "Summer 2019", Line_Alignment.LEFT);
 full_poem.lines[3].words[3] = new Word("raucous", '', ' ', 'harsh, loud', [], [0], ['rW', 'k.s'], ['RAW', 'kis']);
 full_poem.lines[8].words[2] = new Word("stick-and-pokes", '', ' ', 'makeshift tattoo');
 full_poem.lines[8].words[4] = new Word("svedka", '', ' ', 'brand of cheap, flavored vodka');

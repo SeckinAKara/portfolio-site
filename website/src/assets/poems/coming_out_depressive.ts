@@ -13,7 +13,7 @@ let full_poem_text = [
 "there's so many to choose from"
 ]
 export const full_poem = new Full_Poem();
-full_poem.parsePoem("coming out of a depressive episode", full_poem_text, "Christmas 2021");
+full_poem.parsePoem("coming out of a depressive episode", full_poem_text, "December 2021");
 full_poem.lines[1].words[1] = new Word("filamentous", '', ', ', "made of filaments", [], [2], ["fil", ".", "men", "tis"], ["fill", "uh", "MENT", "us"]);
 full_poem.lines[1].words[2] = new Word("botanical", '', ', ', "having to do with plants", [], [1], ["b.", "tan", "i", "k.l"], ['buh', 'TAN', 'ickle'], );
 full_poem.lines[2].words[5] = new Word("legibility", '', ' ', "readability", [], [2], ["le", "j.", "bi", "li", "tE"], ["ledge", "aBILity"]);

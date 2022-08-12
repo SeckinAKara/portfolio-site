@@ -191,19 +191,6 @@ export type poem_map = {
   [key: string]: Full_Poem;
 };
 
-export class PoemMap {
-  public poem_map:poem_map;
-
-  constructor(poem_map:poem_map = {}) { 
-    this.poem_map = poem_map;
-  }
-
-  hasTitle(check_title: string): boolean {
-    let result = this.poem_map[check_title];
-    return (result !== undefined);
-  }
-}
-
 export class PoemSettings {
   ascii_pronunciation: boolean;
   rhyme_colors: boolean;

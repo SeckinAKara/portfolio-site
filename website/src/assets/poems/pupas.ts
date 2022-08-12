@@ -19,7 +19,7 @@ let full_poem_text = [
 ]
 
 export const full_poem = new Full_Poem();
-full_poem.parsePoem("pupas", full_poem_text, "Aug 2018");
+full_poem.parsePoem("pupas", full_poem_text, "August 2018");
 full_poem.lines[0].words[0] = new Word('queers', '', ' ', "LGBTQ+ community");
 full_poem.lines[13].words[0] = full_poem.lines[0].words[0];
 full_poem.lines[9].words[2] = new Word("polyhedra", '', '', "3D shapes", [], [2], ['pol', 'E', 'hE', 'dr.'], ["polly", "HEED", "ruh"]);

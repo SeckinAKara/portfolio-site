@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter, DoCheck, OnChanges, SimpleChanges } from '@angular/core';
 import { FileGrabberService } from '../file-grabber.service';
-import { Full_Poem, PoemSettings, Word, PoemMap } from './poem_classes';
+import { Full_Poem, PoemSettings, poem_map } from './poem_classes';
 import { Router } from '@angular/router';
 import { full_poem_map, valid_poem_map } from 'src/assets/poems';
 
@@ -28,8 +28,8 @@ export class PoemComponentTemplate {
 })
 export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCheck  {
 
-  poem_index: PoemMap = full_poem_map;
-  valid_poem_index: PoemMap = valid_poem_map;
+  poem_index: poem_map = full_poem_map;
+  valid_poem_index: poem_map = valid_poem_map;
   sound_colors = ['none', 'crimson', 'hotpink', 'orange', 'darkkhaki', 'fuchsia', 'purple', 'limegreen', 'darkolivegreen', 'rosybrown', 'saddlebrown', 'silver', 'slategray']
 
   constructor(private http: FileGrabberService, private router: Router) { 
@@ -39,7 +39,7 @@ export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCh
   ngOnInit() {     
     let preliminary_url = this.router.url.split('/');
     let preliminary_title = preliminary_url[preliminary_url.length - 1];
-    if (full_poem_map.hasTitle(preliminary_title)) {
+    if (full_poem_map[preliminary_title] !== undefined ) {
       this.poemTitle = preliminary_title;
     }
     this.getPoem();    
@@ -50,7 +50,12 @@ export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCh
   }
 
   getPoem(): void {
+    let old_poem = this.poem;
     this.poem = this.http.getPoem(this.poemTitle);
+    if ((old_poem != this.poem) && (this.poemSettings.rhyme_colors)) {
+      this.poemSettings.rhyme_colors = false;
+      this.poemSettingsChange.emit(this.poemSettings);
+    }
   }
 
   hoverWord(word_index:number[]): void {

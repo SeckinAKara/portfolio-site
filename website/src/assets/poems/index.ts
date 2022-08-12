@@ -1,4 +1,4 @@
-import { PoemMap, Full_Poem, poem_map } from "src/app/poem/poem_classes";
+import { Full_Poem, poem_map } from "src/app/poem/poem_classes";
 import { full_poem as coming_out_depressive } from "./coming_out_depressive";
 import { full_poem as parents_house_mine } from "./parents_house_mine";
 import { full_poem as pupas } from "./pupas";
@@ -46,6 +46,7 @@ import { full_poem as psychoanalyzing_selfies } from './psychoanalyzing_selfies'
 import { full_poem as menage_a_froid } from './menage_a_froid'
 import { full_poem as autochthon } from './autochthon'
 import { full_poem as bacchanal_gymnopedia } from './bacchanal_gymnopedia'
+import { full_poem as vascularized } from './vascularized'
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -98,7 +99,8 @@ full_poem_index['psychoanalyzing_selfies'] = valid_poem_index['psychoanalyzing_s
 full_poem_index['menage_a_froid'] = valid_poem_index['menage_a_froid'] = menage_a_froid;
 full_poem_index['autochthon'] = valid_poem_index['autochthon'] = autochthon;
 full_poem_index['bacchanal_gymnopedia'] = valid_poem_index['bacchanal_gymnopedia'] = bacchanal_gymnopedia;
+full_poem_index['vascularized'] = valid_poem_index['vascularized'] = vascularized;
 
 
-export const full_poem_map:PoemMap = new PoemMap(full_poem_index);
-export const valid_poem_map:PoemMap = new PoemMap(valid_poem_index);
+export const full_poem_map:poem_map = full_poem_index;
+export const valid_poem_map:poem_map = valid_poem_index;

@@ -1,5 +1,14 @@
 <div>
+    <span>
+        Sort by:
+        <button mat-raised-button color="primary" (click)="sortPoemsBy('date')">Date</button>
+        <button mat-raised-button color="primary" (click)="sortPoemsBy('title')">Title</button>
+        <br>
+    </span>
+    <span>
+        <mat-slide-toggle color="accent" [(ngModel)]="reverse_sort" (click)="sorted_poem_titles.reverse()">Ascending order</mat-slide-toggle>
+    </span>
     <ul>
-        <li *ngFor="let title of valid_poem_index.poem_map | keyvalue" [routerLink]="['/poems/', title.key]" (click)="updatePoem(title.key)">{{ title.value.title }}</li>
+        <li *ngFor="let title of sorted_poem_titles" [routerLink]="['/poems/', title[0]]" (click)="updatePoem(title[0])">{{ title[1] }}</li>
     </ul>
 </div>
