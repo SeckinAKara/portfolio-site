@@ -4,8 +4,9 @@
         <p *ngFor="let line of poem.number_of_lines" [ngStyle]="{'text-align': poem.lines[line].align}">
             <span [ngStyle]="{'cursor': 'default'}">
                 <span *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])"
-                        [ngClass]="poem.lines[line].words[word].primary_meaning.length > 0 ? 'poem-word-underlined' : 'poem-word' "
-                        [ngStyle]="{'font-style': poem.lines[line].words[word].italicized ? 'italic' : 'normal'}">
+                        [ngClass]="poem.lines[line].words[word].primary_meaning.length > 0 ? 'poem-word-underlined' : 'poem-word'"
+                        [ngStyle]="{'font-style': poem.lines[line].words[word].italicized ? 'italic' : 'normal',
+                                    'background-color': soundGroupHighlight([line, word])}">
                     <poem-word-tooltip *ngIf="currentHover([line, word])" 
                                         [(poemSettings)]="poemSettings" 
                                         [current_word]="poem.lines[line].words[word]">

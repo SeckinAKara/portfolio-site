@@ -26,11 +26,11 @@ export class PoemComponentTemplate {
   templateUrl: './poem.component.html',
   styleUrls: ['./poem.component.css']
 })
-export class PoemComponent extends PoemComponentTemplate implements OnInit, OnChanges, DoCheck  {
+export class PoemComponent extends PoemComponentTemplate implements OnInit, DoCheck  {
 
   poem_index: PoemMap = full_poem_map;
   valid_poem_index: PoemMap = valid_poem_map;
-
+  sound_colors = ['none', 'crimson', 'hotpink', 'orange', 'darkkhaki', 'fuchsia', 'purple', 'limegreen', 'darkolivegreen', 'rosybrown', 'saddlebrown', 'silver', 'slategray']
 
   constructor(private http: FileGrabberService, private router: Router) { 
     super();
@@ -43,10 +43,6 @@ export class PoemComponent extends PoemComponentTemplate implements OnInit, OnCh
       this.poemTitle = preliminary_title;
     }
     this.getPoem();    
-  }
-
-  ngOnChanges(): void {
-    this.getPoem();
   }
 
   ngDoCheck(): void {
@@ -67,6 +63,15 @@ export class PoemComponent extends PoemComponentTemplate implements OnInit, OnCh
     } else {
       this.poemSettings.clicked = 0;
       return false;
+    }
+  }
+
+  soundGroupHighlight(word_index: number[]): string {
+    if (!this.poemSettings.rhyme_colors) {
+      return 'transparent'
+    } else {
+      let current_word = this.poem.lines[word_index[0]].words[word_index[1]];
+      return this.sound_colors[current_word.sound_group]
     }
   }
 }

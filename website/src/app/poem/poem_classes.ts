@@ -60,6 +60,7 @@ export class Word {
   punctuation: punctuation_map;
   capitalization: number[];
   italicized: boolean;
+  sound_group: number;
 
   full_spelling: string = '';
 
@@ -67,7 +68,8 @@ export class Word {
               spelling: string = '', 
               left_separator: string = "", right_separator: string = "", primary_meaning: string = '', other_meanings: string[] = [],
               stressed_syllables: number[] = [0], ascii_pronunciation: string[] = [], spelled_pronunciation: string[] = [],
-              italicized: boolean = false, punctuation:punctuation_map = {}, capitalization:number[] = [], language: Language = Language.ENGLISH
+              italicized: boolean = false, punctuation:punctuation_map = {}, capitalization:number[] = [], language: Language = Language.ENGLISH,
+              sound_group: number = 0
       ) {
       this.spelling = spelling;
       this.left_separator = left_separator;
@@ -79,6 +81,7 @@ export class Word {
       this.punctuation = punctuation;
       this.capitalization = capitalization;
       this.language = language;
+      this.sound_group = sound_group;
   }
 
 
@@ -129,7 +132,8 @@ export class Word {
       this.italicized,
       this.punctuation,
       this.capitalization,
-      this.language
+      this.language,
+      this.sound_group
       );
     return newWord;
   }
