@@ -47,6 +47,7 @@ import { full_poem as menage_a_froid } from './menage_a_froid'
 import { full_poem as autochthon } from './autochthon'
 import { full_poem as bacchanal_gymnopedia } from './bacchanal_gymnopedia'
 import { full_poem as vascularized } from './vascularized'
+import { full_poem as hellscape_infinite } from './hellscape_infinite'
 
 
 let full_poem_index: poem_map = {'all_poems':  new Full_Poem()};
@@ -100,6 +101,7 @@ full_poem_index['menage_a_froid'] = valid_poem_index['menage_a_froid'] = menage_
 full_poem_index['autochthon'] = valid_poem_index['autochthon'] = autochthon;
 full_poem_index['bacchanal_gymnopedia'] = valid_poem_index['bacchanal_gymnopedia'] = bacchanal_gymnopedia;
 full_poem_index['vascularized'] = valid_poem_index['vascularized'] = vascularized;
+full_poem_index['hellscape_infinite'] = valid_poem_index['hellscape_infinite'] = hellscape_infinite;
 
 
 export const full_poem_map:poem_map = full_poem_index;

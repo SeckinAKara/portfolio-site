@@ -14,7 +14,7 @@ let full_poem_text = [
 "spit my ice back as though fire",
 "rape my visage and call the hole",
 "Glory.",
-"Ask yourself: where if your prayer",
+"Ask yourself: where is your prayer",
 "And Whom be the Prey?"
 ]
 

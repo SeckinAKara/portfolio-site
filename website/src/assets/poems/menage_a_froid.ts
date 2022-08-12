@@ -49,10 +49,10 @@ let full_poem_text = [
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("ménage à froid", full_poem_text, "February 21, 2018", Line_Alignment.LEFT);
 full_poem.lines[3].words[2] = new Word("trawler", '', ' ', 'fishing boat');
-full_poem.lines[6].words[3] = new Word("patella", '', ' ', 'kneecap', [], [1], ['p.', 'tel', '.'], ['puh', 'TELL', 'uh']);
+full_poem.lines[6].words[2] = new Word("patella", '', ' ', 'kneecap', [], [1], ['p.', 'tel', '.'], ['puh', 'TELL', 'uh']);
 full_poem.lines[9].words[1] = new Word("olfactorily", '', ' ', 'regarding smell', [], [1], ['p.', 'tel', '.'], ['puh', 'TELL', 'uh']);
 full_poem.lines[27].words[1] = new Word("KY", '', ' ', 'water-based lube brand');
-full_poem.lines[30].words[1] = new Word("miserycordia", '', ' ', 'charity');
+full_poem.lines[29].words[1] = new Word("miserycordia", '', ' ', 'charity');
 
 for (let i = 12; i < 25; i++) {
     full_poem.lines[i].align = Line_Alignment.RIGHT;
