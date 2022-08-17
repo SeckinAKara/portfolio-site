@@ -1,5 +1,5 @@
 <p>
-    <button mat-raised-button color="primary" (click)="updateSettings('poem_title')">Clear Poem</button>
+    <button mat-raised-button color="primary" (click)="updateSettings('settings')">Reset Poem</button>
 </p>
 <br>
 <p>
@@ -20,15 +20,17 @@
 <div>
     <p class="info-box">Poem Title: {{ poem.title }}</p>
     <p class="info-box">Creation Time: {{ poem.creation_time }}</p>
-    <span>
-        ~~~~~~~~!!!Pronunciation Key!!!~~~~~~~~
+    <div>
+        <button (click)="show_pronunciation_key=!show_pronunciation_key">Show Pronunciation Key</button>
         <br>
-        In IPA?
-        <span style="font-family:'Courier New', Courier, monospace">No <mat-slide-toggle color="accent" (change)="ipa_toggle()"></mat-slide-toggle> Yes</span>
-        <br>
-        <span *ngFor="let line of pronunciation_key">
-            {{ line }}
+        <span *ngIf="show_pronunciation_key">
+            In IPA?
+            <span style="font-family:'Courier New', Courier, monospace">No <mat-slide-toggle color="accent" (change)="ipa_toggle()"></mat-slide-toggle> Yes</span>
             <br>
+            <span *ngFor="let line of pronunciation_key">
+                {{ line }}
+                <br>
+            </span>
         </span>
-    </span>
+    </div>
 </div>

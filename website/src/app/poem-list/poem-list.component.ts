@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, DoCheck } from '@angular/core';
 import { PoemComponentTemplate } from '../poem/poem.component';
 import { Full_Poem, poem_map } from '../poem/poem_classes';
 import { full_poem_map, valid_poem_map } from 'src/assets/poems';
@@ -8,18 +8,23 @@ import { full_poem_map, valid_poem_map } from 'src/assets/poems';
   templateUrl: './poem-list.component.html',
   styleUrls: ['./poem-list.component.css']
 })
-export class PoemListComponent extends PoemComponentTemplate implements OnInit {
+export class PoemListComponent extends PoemComponentTemplate implements OnInit, DoCheck {
 
   poem_index: poem_map = full_poem_map;
   valid_poem_index: poem_map = valid_poem_map;
   sorted_poem_titles: [string, string][] = [];
-  reverse_sort: boolean = true;
+  sorting_by: string = 'title';
+  sort_order: string = 'desc';
 
   seasons: string[] = ['Spring', 'Summer', 'Fall', 'Winter'];
   months: string[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   ngOnInit() {
-    this.sortPoemsBy('title');
+    this.sortPoemsBy(this.sorting_by);
+  }
+
+  ngDoCheck(): void {
+    this.sortPoemsBy(this.sorting_by);
   }
 
   updatePoem(poemTitle: string) {
@@ -40,7 +45,7 @@ export class PoemListComponent extends PoemComponentTemplate implements OnInit {
         return 0;
       })
     }
-    if (!this.reverse_sort) {
+    if (this.sort_order == 'asc') {
       items.reverse()
     }
     this.sorted_poem_titles = [];

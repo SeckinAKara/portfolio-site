@@ -12,3 +12,7 @@ li {
 span {
     margin-left: 5pt;
 }
+
+mat-form-field {
+    width: 40%;
+}
