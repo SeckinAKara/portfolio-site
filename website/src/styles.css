@@ -20,7 +20,7 @@ a:link {
 }
 /* visited link */
 a:visited {
-    color: var(--axo-light);
+    color: var(--axo-dark);
     font-size: 16;
     font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

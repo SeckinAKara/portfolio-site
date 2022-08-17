@@ -14,6 +14,7 @@ import { PoemToolbarComponent } from './poem-toolbar/poem-toolbar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'; 
 import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {MatSliderModule} from '@angular/material/slider'; 
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatIconModule,
     MatSlideToggleModule,
     FormsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

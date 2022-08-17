@@ -1,6 +1,9 @@
 <div class="overall">
     <poem-list [(poemTitle)]="poemTitle"></poem-list>
-    <div class="poem-section" (click)="poemSettings.clicked=1-poemSettings.clicked" (mouseout)="hoverWord([])">
+    <div class="poem-section" (click)="poemSettings.clicked=1-poemSettings.clicked" 
+        [ngStyle]="{'transform':'scale('+poemSettings.zoom+') rotate('+poemSettings.rotate+'deg)'}" 
+        (mouseout)="hoverWord([])"
+        >
         <p *ngFor="let line of poem.number_of_lines" [ngStyle]="{'text-align': poem.lines[line].align}">
             <span [ngStyle]="{'cursor': 'default'}">
                 <span *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])"

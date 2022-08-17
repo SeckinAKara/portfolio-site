@@ -45,10 +45,8 @@ export class PoemListComponent extends PoemComponentTemplate implements OnInit {
     }
     this.sorted_poem_titles = [];
     for (var poem_title of items) {
-      console.log(poem_title);
       this.sorted_poem_titles.push([poem_title[0], this.valid_poem_index[poem_title[0]].title]);
     } 
-    console.log(this.sorted_poem_titles);
   }
 
   compareDates(first: Full_Poem, second: Full_Poem): number {
