@@ -47,7 +47,28 @@ full_poem.lines[26].words[4] = new Word("tinnitus", '', ' ', 'ringing sound in e
 full_poem.lines[26].words[5] = new Word("incubus", '', ' ', 'male spirit of nighttime sexual temptation', [], [0], ['iN', 'kyU', 'b.s'], ['ING', 'cube', 'is']);
 full_poem.lines[28].words[0] = new Word("indefatigable", '(', ' ', 'never gets tired', [], [2], ['in', 'd.', 'fat', 'i', 'g.', 'b.l'], ['inde', 'FAT', 'iggable']);
 
+let group_1 = [[4, 1], [4, 2]]; // o
+let group_2 = [[3, 4], [5, 1], [5, 2], [5, 3], [14, 0], [14, 3], [15, 2], ]; // a
+let group_3 = [[6, 1], [6, 3], [6, 5], [9, 0], [9, 1]] // I
+let group_4 = [[7, 0], [7, 3]] // e
+let group_5 = [[16, 2], [16, 6], [17, 1]] // A
+let group_6 = [[26, 1], [26, 3], [26, 4], [26, 5]] // i
 
-
-
-
+for (var word of group_1) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 1;
+}
+for (var word of group_2) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 2;
+}
+for (var word of group_3) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 3;
+}
+for (var word of group_4) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 4;
+}
+for (var word of group_5) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 5;
+}
+for (var word of group_6) {
+    full_poem.lines[word[0]].words[word[1]].sound_group = 6;
+}

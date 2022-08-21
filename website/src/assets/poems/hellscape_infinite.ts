@@ -2,25 +2,25 @@ import { Full_Poem, Line, Line_Alignment, Word } from "src/app/poem/poem_classes
 
 let full_poem_text = [
 "the eternal ash congeals like blood spread thin across a tin hospital pan, shifts with cold wind",
-"           small bushes                                                                                  tendrils ",
-"        petrified and dense                                                                               unnamed",
-"       skitter about with gusts                                                                             never seen",
-"  before faltering in a divet or hill                     if                                                 born after",
-"           like half-eaten apples                                                                           all the catalogs",
-"               thrown from                               there                                             had long burned",
-"             car windows                                                                                  do not waver",
-"                                                 is                                                      stand watch",
-"                                                                                                        their insides",
-"                                                      rain                                               would’ve ",
-"                                                                                                          been",
-"                 -with the                                                                                  medic ",
-"                 -still ness                       it                                                        ina       ",
-"                 -there is                                                                                   l           ",
-"                 -a hum                                                                                                  ",
-"              -of pasts                                 is                               motes            ",
+"small bushes                      tendrils ",
+"petrified and dense                   unnamed",
+"skitter about with gusts                   never seen",
+"before faltering in a divet or hill       if             born after",
+"like half-eaten apples                  all the catalogs",
+"thrown from           there         had long burned",
+"car windows                      do not waver",
+"              is           stand watch",
+"                         their insides",
+"           rain             would’ve ",
+"                          been",
+"  -with the                    medic ",
+"-still ness         it           ina",
+"-there is                     l",
+"-a hum                     ",
+"-of pasts         is          motes",
 "",
-"                                                                                        drift       ",
-"                                                  silent                                          ",
+"                       drift",
+"silent",
 "",
 "",
 "a faraway horizon projects the veneer of solidity, the icy capstone to flatworld burnt to browns,",
@@ -50,8 +50,8 @@ export const full_poem = new Full_Poem();
 full_poem.parsePoem("hellscape infinite", full_poem_text, "May 2018", Line_Alignment.CENTER);
 
 let group_1 = [[0, 0], [0, 1], [0, 3]];
-let group_2 = [[0, 7], [0, 10], [0, 13], [0, 14], [0, 16], [3, 7], [3, 9], [4, 4], [4, 6], [4, 8]];
-let group_3 = [[2, 8], [2, 10]];
+let group_2 = [[0, 7], [0, 10], [0, 13], [0, 14], [0, 16], [3, 0], [3, 2], [4, 2], [4, 4], [4, 6]];
+let group_3 = [[2, 0], [2, 2]];
 let group_4 = [[22, 10], [22, 12]];
 let group_5 = [[22, 13], [22, 15]];
 let group_6 = [[29, 1], [29, 3], [29, 7], [30, 3], [31, 10], [32, 18], [32, 20], [35, 3], [36, 1], [36, 2]];

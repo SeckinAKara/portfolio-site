@@ -38,7 +38,7 @@ let full_poem_text = [
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("pincushion", full_poem_text, "February 2020", Line_Alignment.CENTER);
 full_poem.lines[0].words[10] = new Word("trepanning", '', '', 'ancient medicine, drilling hole in skull', [], [1], ['tr.', 'pan', 'iN'], ['truh', 'PANNing']);
-full_poem.lines[1].words[6] = new Word("inignorably", '', ' ', 'unable to be ignored', [], [1], ['i', 'nig', 'n.R', '.', 'blE'], ['i', 'NIG', 'ner', 'ubly']);
+full_poem.lines[1].words[6] = new Word("inignorably", '', ' ', 'unable to be ignored', [], [1], ['in', 'ig', 'n.R', '.', 'blE'], ['in', 'IG', 'ner', 'ubly']);
 full_poem.lines[20].words[4] = new Word("placated", '', ' ', 'satisfied, calmed', [], [0], ['pla', 'kAt', '.d'], ['PLAck', 'ated']);
 full_poem.lines[25].words[11] = new Word("IED", '', ' ', 'improvised explosive device');
 

@@ -40,5 +40,5 @@ export const full_poem = new Full_Poem();
 full_poem.parsePoem("path of his herd", full_poem_text, "May 2019", Line_Alignment.LEFT);
 full_poem.lines[6].words[2] = new Word("privy", '', ' ', 'aware of', [], [0], ['pri', 'vE'], ['PRIV', 'vee']);
 full_poem.lines[7].words[6] = new Word("periphery", '', ' ', 'outer edges', [], [1], ['p.R', 'ri', 'f.R', 'rE'], ['per', 'RIFF', 'eree']);
-full_poem.lines[10].words[4] = new Word("ubiquitous", '', ' ', 'always everywhere', [], [1], ['yU','bi', 'kwi', 't.s'], ['yoo', 'BICK', 'wittis']);
-full_poem.lines[10].words[8] = new Word("acclimated", '', ' ', 'gotten used to', [], [0], ['ak', 'li', 'mA', 't.d'], ['ACK', 'lim', 'ated']);
+full_poem.lines[9].words[4] = new Word("ubiquitous", '', ' ', 'always everywhere', [], [1], ['yU','bi', 'kwi', 't.s'], ['yoo', 'BICK', 'wittis']);
+full_poem.lines[9].words[8] = new Word("acclimated", '', ' ', 'gotten used to', [], [0], ['ak', 'li', 'mA', 't.d'], ['ACK', 'lim', 'ated']);

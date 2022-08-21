@@ -37,6 +37,7 @@ let full_poem_text = [
 
 export const full_poem = new Full_Poem();
 full_poem.parsePoem("vascularized", full_poem_text, "August 11, 2022", Line_Alignment.LEFT);
+full_poem.lines[0].words[5] = new Word("capillaries", '', ' ', 'tiny blood vessels', [], [0], ['kap', '.', 'lAR', 'Ez'], ['CAP', 'pill', 'air', 'eez']);
 full_poem.lines[2].words[3] = new Word("presentsce", '', ' ', 'presents + presence');
 full_poem.lines[3].words[2] = new Word("abscenssce", '', ' ', 'abscess + absence');
 full_poem.lines[19].words[1] = new Word("idolatry", '', ' ', 'idol worship', [], [1], ['I', 'dol', '.', 'trE'], ['eye', 'DOLL', 'uhtree']);
