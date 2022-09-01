@@ -1,25 +1,38 @@
-<div class="overall">
-    <poem-list [(poemTitle)]="poemTitle"></poem-list>
-    <div class="poem-section" (click)="poemSettings.clicked=1-poemSettings.clicked" 
-        [ngStyle]="{'transform':'scale('+poemSettings.zoom+') rotate('+poemSettings.rotate+'deg)'}" 
-        (mouseout)="hoverWord([])"
-        >
-        <p *ngFor="let line of poem.number_of_lines" [ngStyle]="{'text-align': poem.lines[line].align}">
-            <span [ngStyle]="{'cursor': 'default'}">
-                <span *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])"
-                        [ngClass]="poem.lines[line].words[word].primary_meaning.length > 0 ? 'poem-word-underlined' : 'poem-word'"
-                        [ngStyle]="{'font-style': poem.lines[line].words[word].italicized ? 'italic' : 'normal',
-                                    'background-color': soundGroupHighlight([line, word])}">
-                    <poem-word-tooltip *ngIf="currentHover([line, word])" 
-                                        [(poemSettings)]="poemSettings" 
-                                        [current_word]="poem.lines[line].words[word]">
-                    </poem-word-tooltip>
-                        {{ poem.lines[line].words[word].fullSpelling().replace(" ", " ") }}
-                        <!--space is U+205F-->
+<span style="position:fixed; top:60pt; left:12pt; z-index:2">
+    <button (click)="poemlist.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <button (click)="toolbar.toggle()">
+        <mat-icon>settings</mat-icon>
+    </button>
+</span>
+<mat-sidenav-container>
+    <mat-sidenav #poemlist position="start" mode="side">
+        <poem-list [(poemTitle)]="poemTitle"></poem-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div (click)="poemSettings.clicked=1-poemSettings.clicked" 
+            [ngStyle]="{'transform':'scale('+poemSettings.zoom+') rotate('+poemSettings.rotate+'deg)'}" 
+            (mouseout)="hoverWord([])"
+            >
+            <p *ngFor="let line of poem.number_of_lines" [ngStyle]="{'text-align': poem.lines[line].align, 'font-size': poemSettings.font_size + 'pt'}">
+                <span [ngStyle]="{'cursor': 'default'}">
+                    <span *ngFor="let word of poem.lines[line].number_of_words" (mouseover)="hoverWord([line, word])"
+                            [ngClass]="poem.lines[line].words[word].primary_meaning.length > 0 ? 'poem-word-underlined' : 'poem-word'"
+                            [ngStyle]="{'font-style': poem.lines[line].words[word].italicized ? 'italic' : 'normal',
+                                        'background-color': soundGroupHighlight([line, word])}">
+                        <poem-word-tooltip *ngIf="currentHover([line, word])" 
+                                            [(poemSettings)]="poemSettings" 
+                                            [current_word]="poem.lines[line].words[word]">
+                        </poem-word-tooltip>
+                            {{ poem.lines[line].words[word].fullSpelling().replace(" ", " ") }}
+                            <!--space is U+205F-->
+                    </span>
                 </span>
-            </span>
-        </p>
-        <br><br><br>
-    </div>
-    <poem-toolbar [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
-</div>
+            </p>
+        </div>
+    </mat-sidenav-content>
+    <mat-sidenav #toolbar position="end" mode="side">
+        <poem-toolbar [(poemSettings)]="poemSettings" [(poem)]="poem" [(poemTitle)]="poemTitle"></poem-toolbar>
+    </mat-sidenav>    
+</mat-sidenav-container>

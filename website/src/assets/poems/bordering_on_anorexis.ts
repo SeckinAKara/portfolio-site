@@ -26,7 +26,7 @@ let full_poem_text = [
 "delirious and cloud-legged towards",
 "the purgatory you’ve lived thousandsly",
 "mountains zipper through a sky",
-"placental jagged crucifixes screaming into the azure",
+"jagged placentas crucified screaming into the azure",
 "they will never hear you",
 "but maybe they used to",
 "hard to predict the past, all you have",

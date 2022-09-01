@@ -196,14 +196,16 @@ export class PoemSettings {
   rhyme_colors: boolean;
   hovering: number[];
   clicked: number;
+  font_size: number;
   zoom: number;
   rotate: number;
 
-  constructor(ascii_pronunciation = false, rhyme_colors = false, hovering = [], clicked = 0, zoom = 1, rotate = 0) {
+  constructor(ascii_pronunciation = false, rhyme_colors = false, hovering = [], clicked = 0, font_size = 16, zoom = 1, rotate = 0) {
     this.ascii_pronunciation = ascii_pronunciation;
     this.rhyme_colors = rhyme_colors;
     this.hovering = hovering;
     this.clicked = clicked;
+    this.font_size = font_size;
     this.zoom = zoom;
     this.rotate = rotate;
   }

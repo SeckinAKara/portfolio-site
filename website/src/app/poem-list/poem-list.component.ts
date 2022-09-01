@@ -14,7 +14,7 @@ export class PoemListComponent extends PoemComponentTemplate implements OnInit, 
   valid_poem_index: poem_map = valid_poem_map;
   sorted_poem_titles: [string, string][] = [];
   sorting_by: string = 'title';
-  sort_order: string = 'desc';
+  sort_order: string = 'asc';
 
   seasons: string[] = ['Spring', 'Summer', 'Fall', 'Winter'];
   months: string[] = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -45,7 +45,7 @@ export class PoemListComponent extends PoemComponentTemplate implements OnInit, 
         return 0;
       })
     }
-    if (this.sort_order == 'asc') {
+    if (this.sort_order == 'desc') {
       items.reverse()
     }
     this.sorted_poem_titles = [];

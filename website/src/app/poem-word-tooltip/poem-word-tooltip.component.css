@@ -7,14 +7,12 @@ p {
     padding: 5px 2px;
     border-radius: 6px;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 12pt;
 
     /* Position the tooltip text - see examples below! */
     position: absolute;
     display: inline-block;
-    bottom: -20pt;
-    right: 100%;
     cursor: inherit;
-    z-index: 2;
 }
 
 .italicized span {

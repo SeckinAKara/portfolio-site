@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatSliderModule } from '@angular/material/slider'; 
 import { MatSelectModule } from '@angular/material/select'; 
+import {MatSidenavModule} from '@angular/material/sidenav'; 
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatSlideToggleModule,
     FormsModule,
     MatSliderModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

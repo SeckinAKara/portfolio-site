@@ -1,7 +1,13 @@
+div {
+    height: 100%;
+}
+
 ul {
     cursor: pointer;    
     z-index: 1;
+    height: 90%;
     overflow: auto;
+    margin-top: 0;
 }
 
 li {

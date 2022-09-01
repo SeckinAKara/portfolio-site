@@ -10,6 +10,8 @@
     <span style="font-family:'Courier New', Courier, monospace">ASCII <mat-slide-toggle color="accent" [checked]="!ascii" (change)="updateSettings('ascii')"></mat-slide-toggle> Spelled</span>
 </p>
 <p>
+    Font Size<mat-slider aria-label="zoom" min="2" max="32" step="2" value="16" tickInterval="8" [(ngModel)]="poemSettings.font_size"></mat-slider>
+    <br>
     Poem Zoom<mat-slider aria-label="zoom" min="0.1" max="1" step="0.1" value="1" tickInterval="3" [(ngModel)]="poemSettings.zoom"></mat-slider>
     <br>
     Poem Rotate <mat-slider aria-label="rotate" min="0" max="360" step="10" value="0" tickInterval="8" [(ngModel)]="poemSettings.rotate"></mat-slider>

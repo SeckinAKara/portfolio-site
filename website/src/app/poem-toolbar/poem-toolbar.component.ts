@@ -30,6 +30,7 @@ export class PoemToolbarComponent extends PoemComponentTemplate {
     } else if (property == 'settings') {
       this.poemSettings.rhyme_colors = false;
       this.poemSettings.ascii_pronunciation = false;
+      this.poemSettings.font_size = 16;
       this.poemSettings.rotate = 0;
       this.poemSettings.zoom = 1;
       this.poemSettingsChange.emit(this.poemSettings);

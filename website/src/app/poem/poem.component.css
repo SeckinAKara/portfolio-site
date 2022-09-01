@@ -1,25 +1,20 @@
 p {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16pt;
     margin-left: 5pt;
     margin-right: 5pt;
 }
 
-.overall {
+mat-sidenav-container {
     display: flex;
+    flex: row;
+    flex-wrap: nowrap;
     width: 100%;
-    height: 90%;
-    z-index: -1;
+    height: calc(100vh - 70pt);;
     margin-top: 20pt;
+    padding-bottom: 30pt;
+    background-color: var(--axo-blue);
+    z-index: 0;
 }
-
-.poem-section {
-    padding: 20pt 20% 0% 20%;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 .poem-word {
     position: relative;
     display: inline-block;
@@ -33,31 +28,35 @@ p {
     border-width: 0 0 2px 0;
 }
 
-poem-toolbar {
+/*poem-list {
     margin-top: 20pt;
     width: 20%;
-    height: 80%;
-    position: fixed;
+    left: 0;
+    border-right: 1pt black solid;
+    z-index: 1;
+}*/
+
+mat-sidenav-content {
+    /*padding: 20pt 20% 0% 20%;*/
+    position: relative;
+    padding: 40pt 10% 0pt 10%;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
+
+/*poem-toolbar {
+    top: 0; 
+    margin-top: 20pt;
+    width: 20%;
     right: 0;
     border-left: 1pt black solid;
     overflow: auto;
     z-index: 1;
-}
+}*/
 
 poem-word-tooltip {
     position: relative;
-    bottom: 20pt;
-    left: 100%;
+    left: 50pt;
     z-index: 2;
-}
-
-poem-list {
-    margin-top: 20pt;
-    width: 20%;
-    height: 80%;
-    position: fixed;
-    left: 0;
-    border-right: 1pt black solid;
-    overflow: auto;
-    z-index: 1;
 }
