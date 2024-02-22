@@ -1,0 +1,47 @@
+import { Full_Poem, Line_Alignment, Word } from "../../app/poem/poem_classes";
+
+let full_poem_text = [
+"we used to only speak Turkish,",
+"my family,",
+"when we didn't want to be understood",
+"so my entire vocabulary consisted of ",
+"prices and insults",
+"when i tried to formulate how i'd come out",
+"to my Turkish relatives",
+"my honest first attempt was gonna be",
+"ibneyim",
+"I am a faggot",
+"just 1 word, Turkish is efficient like that",
+"",
+"Pamukkale means \"cotton castle\"",
+"it looks like a frozen cum volcano",
+"covered in hot springs where Turkish men",
+"congregate nearly nude and",
+"argue about how many Syrian refugees they ought to tolerate",
+"we climbed to the top and let tiny fish",
+"eat the dead skin off our toes",
+"at the base of a ruined Greek amphitheater",
+"",
+"my uncle is shocked to hear me speak ",
+"whole sentences over the phone",
+"i tell him i've been studying online",
+"in between my üniversite classes",
+"he jokes his çöp türkçe ",
+"garbage turkish",
+"must be tough to understand",
+"i laugh and say a little",
+"",
+"my aunt follows me on instagram",
+"at 10am (3am EST) while i'm taking a shit",
+"and sees a crime scene on her nephew's face",
+"my mother awakens me the next morning accusing me",
+"of wanting to be a woman",
+"i am not certain enough to refute her",
+"\"how is your dad going to explain this to them?\"",
+"lucky for me, guess the Turkish word for",
+"transseksüel",
+"too bad we don't speak anymore"
+]
+
+export const full_poem = new Full_Poem()
+full_poem.parsePoem("faggot in every language", full_poem_text, "August 12, 2023", Line_Alignment.CENTER);
