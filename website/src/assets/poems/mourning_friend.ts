@@ -66,4 +66,4 @@ let full_poem_text = [
 ]
 
 export const full_poem = new Full_Poem()
-full_poem.parsePoem("airplane tray table", full_poem_text, "July 10, 2023", Line_Alignment.CENTER);
+full_poem.parsePoem("on mourning a friend and a favorite color", full_poem_text, "July 10, 2023", Line_Alignment.CENTER);

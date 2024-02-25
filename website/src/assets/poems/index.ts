@@ -54,6 +54,7 @@ import { full_poem as catalogue_daemons } from './catalogue_daemons'
 import { full_poem as mourning_friend } from './mourning_friend'
 import { full_poem as skinner_box } from './skinner_box'
 import { full_poem as unsuccessful_stillborn } from './unsuccessful_stillborn'
+import { full_poem as obituary_24 } from './obituary_24'
 
 
 
@@ -116,6 +117,7 @@ full_poem_index['catalogue_daemons'] = valid_poem_index['catalogue_daemons'] = c
 full_poem_index['mourning_friend'] = valid_poem_index['mourning_friend'] = mourning_friend;
 full_poem_index['skinner_box'] = valid_poem_index['skinner_box'] = skinner_box;
 full_poem_index['unsuccessful_stillborn'] = valid_poem_index['unsuccessful_stillborn'] = unsuccessful_stillborn;
+full_poem_index['obituary_24'] = valid_poem_index['obituary_24'] = obituary_24;
 
 export const full_poem_map:poem_map = full_poem_index;
 export const valid_poem_map:poem_map = valid_poem_index;
