@@ -3,7 +3,7 @@ import { Full_Poem, Word, Line_Alignment } from "src/app/poem/poem_classes";
 let full_poem_text = [
 "immolate",
 "burn like a venutian",
-"Thích Quảng Đức",
+"Thich",
 "replace your suns with daughters",
 "fodder them like a canon",
 "there is no heaven for those with no convictions",
